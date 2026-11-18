@@ -1,0 +1,302 @@
+Q1. Store and Display Personal Information
+Question:
+Write a program to store a person's name, age, height, and city in variables and display all the information.
+
+Sample Input:
+Name: Rahul
+Age: 22
+Height: 5.8
+City: Meerut
+
+
+Expected Output:
+Name: Rahul
+Age: 22
+Height: 5.8
+City: Meerut
+
+
+Python Code:
+name = "Rahul"age = 22height = 5.8city = "Meerut"print("Name:", name)print("Age:", age)print("Height:", height)print("City:", city)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    char name[] = "Rahul";
+    int age = 22;
+    float height = 5.8;
+    char city[] = "Meerut";
+
+    printf("Name: %s\n", name);
+    printf("Age: %d\n", age);
+    printf("Height: %.1f\n", height);
+    printf("City: %s\n", city);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        String name = "Rahul";
+        int age = 22;
+        float height = 5.8f;
+        String city = "Meerut";
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Height: " + height);
+        System.out.println("City: " + city);
+    }
+}
+
+
+
+Q2. Perform Basic Arithmetic Operations
+Question:
+Write a program to store two numbers in variables and perform addition, subtraction, multiplication, division, and modulus operations.
+
+Sample Input:
+First Number: 20
+Second Number: 6
+
+
+Expected Output:
+Addition: 26
+Subtraction: 14
+Multiplication: 120
+Division: 3.333333
+Modulus: 2
+
+
+Python Code:
+a = 20b = 6print("Addition:", a + b)print("Subtraction:", a - b)print("Multiplication:", a * b)print("Division:", a / b)print("Modulus:", a % b)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int a = 20;
+    int b = 6;
+
+    printf("Addition: %d\n", a + b);
+    printf("Subtraction: %d\n", a - b);
+    printf("Multiplication: %d\n", a * b);
+    printf("Division: %.6f\n", (float)a / b);
+    printf("Modulus: %d\n", a % b);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int a = 20;
+        int b = 6;
+
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.printf("Division: %.6f%n", (double) a / b);
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+
+
+
+Q3. Swap Two Variables Using a Third Variable
+Question:
+Write a program to swap the values of two variables using a temporary variable.
+
+Sample Input:
+A = 10
+B = 20
+
+
+Expected Output:
+Before Swapping:
+A = 10
+B = 20
+
+After Swapping:
+A = 20
+B = 10
+
+
+Logic:
+1. Store the value of A in a temporary variable.
+2. Assign B to A.
+3. Assign the temporary variable to B.
+Python Code:
+a = 10b = 20print("Before Swapping:")print("A =", a)print("B =", b)temp = aa = bb = tempprint("\nAfter Swapping:")print("A =", a)print("B =", b)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    int b = 20;
+    int temp;
+
+    printf("Before Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("\nAfter Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        int temp;
+
+        System.out.println("Before Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+
+        temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("\nAfter Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+    }
+}
+
+
+
+Q4. Calculate the Area and Perimeter of a Rectangle
+Question:
+Write a program to calculate the area and perimeter of a rectangle using its length and width.
+
+Sample Input:
+Length = 15
+Width = 8
+
+
+Expected Output:
+Area = 120
+Perimeter = 46
+
+
+Formula:
+- Area = Length × Width
+- Perimeter = 2 × (Length + Width)
+Python Code:
+length = 15width = 8area = length * widthperimeter = 2 * (length + width)print("Area =", area)print("Perimeter =", perimeter)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int length = 15;
+    int width = 8;
+
+    int area = length * width;
+    int perimeter = 2 * (length + width);
+
+    printf("Area = %d\n", area);
+    printf("Perimeter = %d\n", perimeter);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int length = 15;
+        int width = 8;
+
+        int area = length * width;
+        int perimeter = 2 * (length + width);
+
+        System.out.println("Area = " + area);
+        System.out.println("Perimeter = " + perimeter);
+    }
+}
+
+
+
+Q5. Calculate Simple Interest
+Question:
+Write a program to calculate simple interest and the total amount using the principal amount, annual interest rate, and time period.
+
+Sample Input:
+Principal = 50000
+Rate = 8
+Time = 3
+
+
+Expected Output:
+Simple Interest = 12000
+Total Amount = 62000
+
+
+Formula:
+- Simple Interest = (Principal × Rate × Time) / 100
+- Total Amount = Principal + Simple Interest
+Python Code:
+principal = 50000rate = 8time = 3simple_interest = (principal * rate * time) / 100total_amount = principal + simple_interestprint("Simple Interest =", simple_interest)print("Total Amount =", total_amount)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    float principal = 50000;
+    float rate = 8;
+    float time = 3;
+
+    float simple_interest =
+        (principal * rate * time) / 100;
+
+    float total_amount = principal + simple_interest;
+
+    printf("Simple Interest = %.0f\n", simple_interest);
+    printf("Total Amount = %.0f\n", total_amount);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        double principal = 50000;
+        double rate = 8;
+        double time = 3;
+
+        double simpleInterest =
+            (principal * rate * time) / 100;
+
+        double totalAmount = principal + simpleInterest;
+
+        System.out.println("Simple Interest = " + simpleInterest);
+        System.out.println("Total Amount = " + totalAmount);
+    }
+}
