@@ -597,4 +597,299 @@ public class Main {
     }
 }
 
+Q11. Convert an Integer into Float and String
+Question:
+Write a program to convert an integer value into a floating-point number and a string. Display the original and converted values along with their data types.
+
+Sample Input:
+Number = 25
+
+
+Expected Output:
+Original Value = 25
+Float Value = 25.0
+String Value = 25
+
+Original Type = Integer
+Float Type = Float
+String Type = String
+
+
+Logic:
+- Convert integer into float.
+- Convert integer into string.
+- Display the values and their data types.
+Python Code:
+number = 25float_value = float(number)string_value = str(number)print("Original Value =", number)print("Float Value =", float_value)print("String Value =", string_value)print("\nOriginal Type =", type(number).__name__)print("Float Type =", type(float_value).__name__)print("String Type =", type(string_value).__name__)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int number = 25;
+
+    float float_value = (float)number;
+
+    char string_value[20];
+    sprintf(string_value, "%d", number);
+
+    printf("Original Value = %d\n", number);
+    printf("Float Value = %.1f\n", float_value);
+    printf("String Value = %s\n", string_value);
+
+    printf("\nOriginal Type = Integer\n");
+    printf("Float Type = Float\n");
+    printf("String Type = String\n");
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int number = 25;
+
+        float floatValue = (float) number;
+        String stringValue = String.valueOf(number);
+
+        System.out.println("Original Value = " + number);
+        System.out.println("Float Value = " + floatValue);
+        System.out.println("String Value = " + stringValue);
+
+        System.out.println("\nOriginal Type = Integer");
+        System.out.println("Float Type = Float");
+        System.out.println("String Type = String");
+    }
+}
+
+
+
+Q12. Convert a Float into Integer and Integer into Character
+Question:
+Write a program to convert a floating-point number into an integer and convert an integer ASCII value into its corresponding character.
+
+Sample Input:
+Float Number = 45.89
+ASCII Value = 65
+
+
+Expected Output:
+Original Float = 45.89
+Converted Integer = 45
+
+ASCII Value = 65
+Corresponding Character = A
+
+
+Logic:
+- Convert the floating-point number into an integer by removing its fractional part.
+- Convert the ASCII value 65 into its corresponding character.
+Python Code:
+float_number = 45.89ascii_value = 65integer_value = int(float_number)character = chr(ascii_value)print("Original Float =", float_number)print("Converted Integer =", integer_value)print("\nASCII Value =", ascii_value)print("Corresponding Character =", character)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    float float_number = 45.89;
+    int ascii_value = 65;
+
+    int integer_value = (int)float_number;
+    char character = (char)ascii_value;
+
+    printf("Original Float = %.2f\n", float_number);
+    printf("Converted Integer = %d\n", integer_value);
+
+    printf("\nASCII Value = %d\n", ascii_value);
+    printf("Corresponding Character = %c\n", character);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        double floatNumber = 45.89;
+        int asciiValue = 65;
+
+        int integerValue = (int) floatNumber;
+        char character = (char) asciiValue;
+
+        System.out.println("Original Float = " + floatNumber);
+        System.out.println("Converted Integer = " + integerValue);
+
+        System.out.println("\nASCII Value = " + asciiValue);
+        System.out.println("Corresponding Character = " + character);
+    }
+}
+
+
+
+Q13. Calculate the ASCII Value of a Character
+Question:
+Write a program to store a character in a variable and display its ASCII value.
+
+Sample Input:
+Character = A
+
+
+Expected Output:
+Character = A
+ASCII Value = 65
+
+
+Logic:
+
+Every character has a numeric ASCII value. Convert the character into its corresponding integer value.
+
+Python Code:
+character = 'A'ascii_value = ord(character)print("Character =", character)print("ASCII Value =", ascii_value)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    char character = 'A';
+
+    int ascii_value = (int)character;
+
+    printf("Character = %c\n", character);
+    printf("ASCII Value = %d\n", ascii_value);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        char character = 'A';
+
+        int asciiValue = (int) character;
+
+        System.out.println("Character = " + character);
+        System.out.println("ASCII Value = " + asciiValue);
+    }
+}
+
+
+
+Q14. Find a Character Using Its ASCII Value
+Question:
+Write a program to convert an ASCII integer value into its corresponding character and display both.
+
+Sample Input:
+ASCII Value = 97
+
+
+Expected Output:
+ASCII Value = 97
+Character = a
+
+
+Logic:
+
+Convert the integer ASCII value into a character using the appropriate type conversion.
+
+Python Code:
+ascii_value = 97character = chr(ascii_value)print("ASCII Value =", ascii_value)print("Character =", character)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int ascii_value = 97;
+
+    char character = (char)ascii_value;
+
+    printf("ASCII Value = %d\n", ascii_value);
+    printf("Character = %c\n", character);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int asciiValue = 97;
+
+        char character = (char) asciiValue;
+
+        System.out.println("ASCII Value = " + asciiValue);
+        System.out.println("Character = " + character);
+    }
+}
+
+
+
+Q15. Calculate Quotient and Remainder
+Question:
+Write a program to divide two integers and calculate their quotient and remainder. Display the original numbers, quotient, and remainder.
+
+Sample Input:
+Dividend = 47
+Divisor = 5
+
+
+Expected Output:
+Dividend = 47
+Divisor = 5
+Quotient = 9
+Remainder = 2
+
+
+Formula:
+- Quotient = Dividend / Divisor (integer division)
+- Remainder = Dividend % Divisor
+Python Code:
+dividend = 47divisor = 5quotient = dividend // divisorremainder = dividend % divisorprint("Dividend =", dividend)print("Divisor =", divisor)print("Quotient =", quotient)print("Remainder =", remainder)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int dividend = 47;
+    int divisor = 5;
+
+    int quotient = dividend / divisor;
+    int remainder = dividend % divisor;
+
+    printf("Dividend = %d\n", dividend);
+    printf("Divisor = %d\n", divisor);
+    printf("Quotient = %d\n", quotient);
+    printf("Remainder = %d\n", remainder);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int dividend = 47;
+        int divisor = 5;
+
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
+
+        System.out.println("Dividend = " + dividend);
+        System.out.println("Divisor = " + divisor);
+        System.out.println("Quotient = " + quotient);
+        System.out.println("Remainder = " + remainder);
+    }
+}
+
 
