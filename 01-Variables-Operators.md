@@ -206,7 +206,6 @@ Average Marks: 84.00
 Percentage: 84.00%
 
 
-
 <table>
 <tr><th>Python</th><th>C</th><th>Java</th></tr>
 <tr>
@@ -228,4 +227,73 @@ print("Percentage:", round(percentage, 2), "%")</code></pre></td>
 <td valign="top"><pre><code>#include &lt;stdio.h&gt;
 
 int main()
+{
+    float s1, s2, s3, s4, s5;
+
+    printf("Subject 1: ");
+    scanf("%f", &amp;s1);
+
+    printf("Subject 2: ");
+    scanf("%f", &amp;s2);
+
+    printf("Subject 3: ");
+    scanf("%f", &amp;s3);
+
+    printf("Subject 4: ");
+    scanf("%f", &amp;s4);
+
+    printf("Subject 5: ");
+    scanf("%f", &amp;s5);
+
+    float total = s1 + s2 + s3 + s4 + s5;
+
+    float average = total / 5;
+
+    float percentage = (total / 500) * 100;
+
+    printf("Total Marks: %.2f\n", total);
+    printf("Average Marks: %.2f\n", average);
+    printf("Percentage: %.2f%%\n", percentage);
+
+    return 0;
+}</code></pre></td>
+<td valign="top"><pre><code>import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Subject 1: ");
+        double s1 = sc.nextDouble();
+
+        System.out.print("Subject 2: ");
+        double s2 = sc.nextDouble();
+
+        System.out.print("Subject 3: ");
+        double s3 = sc.nextDouble();
+
+        System.out.print("Subject 4: ");
+        double s4 = sc.nextDouble();
+
+        System.out.print("Subject 5: ");
+        double s5 = sc.nextDouble();
+
+        double total = s1 + s2 + s3 + s4 + s5;
+
+        double average = total / 5;
+
+        double percentage = (total / 500) * 100;
+
+        System.out.printf("Total Marks: %.2f%n", total);
+        System.out.printf("Average Marks: %.2f%n", average);
+        System.out.printf("Percentage: %.2f%%%n", percentage);
+
+        sc.close();
+    }
+}</code></pre></td>
+</tr>
+</table>
+
 
