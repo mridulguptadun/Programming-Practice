@@ -893,3 +893,731 @@ public class Main {
 }
 
 
+Q16. Calculate the Square and Cube of a Number
+Question:
+Write a program to calculate the square and cube of a given number using arithmetic operators.
+
+Sample Input:
+Number = 5
+
+
+Expected Output:
+Number = 5
+Square = 25
+Cube = 125
+
+
+Formula:
+- Square = Number × Number
+- Cube = Number × Number × Number
+Python Code:
+number = 5square = number ** 2cube = number ** 3print("Number =", number)print("Square =", square)print("Cube =", cube)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int number = 5;
+
+    int square = number * number;
+    int cube = number * number * number;
+
+    printf("Number = %d\n", number);
+    printf("Square = %d\n", square);
+    printf("Cube = %d\n", cube);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int number = 5;
+
+        int square = number * number;
+        int cube = number * number * number;
+
+        System.out.println("Number = " + number);
+        System.out.println("Square = " + square);
+        System.out.println("Cube = " + cube);
+    }
+}
+
+
+
+Q17. Calculate the Power of a Number
+Question:
+Write a program to calculate the power of a number using a base and an exponent.
+
+Sample Input:
+Base = 3
+Exponent = 4
+
+
+Expected Output:
+Base = 3
+Exponent = 4
+Result = 81
+
+
+Formula:
+\[
+Result = Base^{Exponent}
+\]
+
+Python Code:
+base = 3exponent = 4result = base ** exponentprint("Base =", base)print("Exponent =", exponent)print("Result =", result)
+
+
+
+C Code:
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int base = 3;
+    int exponent = 4;
+
+    double result = pow(base, exponent);
+
+    printf("Base = %d\n", base);
+    printf("Exponent = %d\n", exponent);
+    printf("Result = %.0f\n", result);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int base = 3;
+        int exponent = 4;
+
+        double result = Math.pow(base, exponent);
+
+        System.out.println("Base = " + base);
+        System.out.println("Exponent = " + exponent);
+        System.out.printf("Result = %.0f%n", result);
+    }
+}
+
+
+
+Q18. Swap Three Variables in a Circular Order
+Question:
+Write a program to swap the values of three variables in a circular order. The value of the first variable should move to the second, the second to the third, and the third to the first.
+
+Sample Input:
+A = 10
+B = 20
+C = 30
+
+
+Expected Output:
+Before Swapping:
+A = 10
+B = 20
+C = 30
+
+After Swapping:
+A = 30
+B = 10
+C = 20
+
+
+Logic:
+1. Store the original value of A in a temporary variable.
+2. Assign C to A.
+3. Assign the original value of A to B.
+4. Assign the original value of B to C.
+Python Code:
+a = 10b = 20c = 30print("Before Swapping:")print("A =", a)print("B =", b)print("C =", c)temp = aa = cc = bb = tempprint("\nAfter Swapping:")print("A =", a)print("B =", b)print("C =", c)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    int b = 20;
+    int c = 30;
+    int temp;
+
+    printf("Before Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+    printf("C = %d\n", c);
+
+    temp = a;
+
+    a = c;
+    c = b;
+    b = temp;
+
+    printf("\nAfter Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+    printf("C = %d\n", c);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        int c = 30;
+        int temp;
+
+        System.out.println("Before Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+        System.out.println("C = " + c);
+
+        temp = a;
+
+        a = c;
+        c = b;
+        b = temp;
+
+        System.out.println("\nAfter Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+        System.out.println("C = " + c);
+    }
+}
+
+
+
+Q19. Demonstrate Constant Variables
+Question:
+Write a program to calculate the area of a circle using a constant variable for the value of PI. Display the radius, PI value, and calculated area.
+
+Sample Input:
+Radius = 7
+PI = 3.14159
+
+
+Expected Output:
+Radius = 7
+PI = 3.14159
+Area = 153.94
+
+
+Formula:
+\[
+Area = PI \times Radius \times Radius
+\]
+
+Logic:
+
+A constant variable stores a value that cannot be reassigned after initialization.
+- Python: Use an uppercase variable name by convention.
+- C: Use the const keyword.
+- Java: Use the final keyword.
+Python Code:
+PI = 3.14159radius = 7area = PI * radius * radiusprint("Radius =", radius)print("PI =", PI)print("Area =", round(area, 2))
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    const float PI = 3.14159;
+    float radius = 7;
+
+    float area = PI * radius * radius;
+
+    printf("Radius = %.0f\n", radius);
+    printf("PI = %.5f\n", PI);
+    printf("Area = %.2f\n", area);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        final double PI = 3.14159;
+        double radius = 7;
+
+        double area = PI * radius * radius;
+
+        System.out.println("Radius = " + (int) radius);
+        System.out.println("PI = " + PI);
+        System.out.printf("Area = %.2f%n", area);
+    }
+}
+
+
+
+Q20. Calculate Product Price After Tax and Discount
+Question:
+Write a program to calculate the final price of a product after applying a discount and adding tax.
+
+A customer purchases a product with an original price of ₹5,000. The shop offers a 10% discount on the original price. After applying the discount, an 18% tax is added to the discounted price. Calculate the discount amount, discounted price, tax amount, and final price.
+
+Sample Input:
+Original Price = 5000
+Discount Rate = 10%
+Tax Rate = 18%
+
+
+Expected Output:
+Original Price = 5000.00
+Discount Amount = 500.00
+Discounted Price = 4500.00
+Tax Amount = 810.00
+Final Price = 5310.00
+
+
+Formula:
+- Discount Amount = Original Price × Discount Rate / 100
+- Discounted Price = Original Price − Discount Amount
+- Tax Amount = Discounted Price × Tax Rate / 100
+- Final Price = Discounted Price + Tax Amount
+Python Code:
+original_price = 5000discount_rate = 10tax_rate = 18discount_amount = original_price * discount_rate / 100discounted_price = original_price - discount_amounttax_amount = discounted_price * tax_rate / 100final_price = discounted_price + tax_amountprint("Original Price =", original_price)print("Discount Amount =", discount_amount)print("Discounted Price =", discounted_price)print("Tax Amount =", tax_amount)print("Final Price =", final_price)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    float original_price = 5000;
+    float discount_rate = 10;
+    float tax_rate = 18;
+
+    float discount_amount =
+        original_price * discount_rate / 100;
+
+    float discounted_price =
+        original_price - discount_amount;
+
+    float tax_amount =
+        discounted_price * tax_rate / 100;
+
+    float final_price =
+        discounted_price + tax_amount;
+
+    printf("Original Price = %.2f\n", original_price);
+    printf("Discount Amount = %.2f\n", discount_amount);
+    printf("Discounted Price = %.2f\n", discounted_price);
+    printf("Tax Amount = %.2f\n", tax_amount);
+    printf("Final Price = %.2f\n", final_price);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        double originalPrice = 5000;
+        double discountRate = 10;
+        double taxRate = 18;
+
+        double discountAmount =
+            originalPrice * discountRate / 100;
+
+        double discountedPrice =
+            originalPrice - discountAmount;
+
+        double taxAmount =
+            discountedPrice * taxRate / 100;
+
+        double finalPrice =
+            discountedPrice + taxAmount;
+
+        System.out.printf("Original Price = %.2f%n", originalPrice);
+        System.out.printf("Discount Amount = %.2f%n", discountAmount);
+        System.out.printf("Discounted Price = %.2f%n", discountedPrice);
+        System.out.printf("Tax Amount = %.2f%n", taxAmount);
+        System.out.printf("Final Price = %.2f%n", finalPrice);
+    }
+}
+
+
+Q21. Demonstrate All Arithmetic Operators
+Question:
+Write a program to perform all basic arithmetic operations on two integers. Display addition, subtraction, multiplication, division, modulus, floor division, and exponentiation wherever supported.
+
+Sample Input:
+First Number = 20
+Second Number = 6
+
+
+Expected Output:
+Addition = 26
+Subtraction = 14
+Multiplication = 120
+Division = 3.333333
+Floor Division = 3
+Modulus = 2
+Exponentiation = 64000000
+
+
+Logic:
+- Addition: a + b
+- Subtraction: a - b
+- Multiplication: a * b
+- Division: a / b
+- Floor Division: a // b
+- Modulus: a % b
+- Exponentiation: a ** b
+Python Code:
+a = 20b = 6print("Addition =", a + b)print("Subtraction =", a - b)print("Multiplication =", a * b)print("Division =", a / b)print("Floor Division =", a // b)print("Modulus =", a % b)print("Exponentiation =", a ** b)
+
+
+
+C Code:
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a = 20;
+    int b = 6;
+
+    printf("Addition = %d\n", a + b);
+    printf("Subtraction = %d\n", a - b);
+    printf("Multiplication = %d\n", a * b);
+    printf("Division = %.6f\n", (float)a / b);
+    printf("Floor Division = %d\n", a / b);
+    printf("Modulus = %d\n", a % b);
+    printf("Exponentiation = %.0f\n", pow(a, b));
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int a = 20;
+        int b = 6;
+
+        System.out.println("Addition = " + (a + b));
+        System.out.println("Subtraction = " + (a - b));
+        System.out.println("Multiplication = " + (a * b));
+        System.out.printf("Division = %.6f%n", (double) a / b);
+        System.out.println("Floor Division = " + (a / b));
+        System.out.println("Modulus = " + (a % b));
+        System.out.printf("Exponentiation = %.0f%n", Math.pow(a, b));
+    }
+}
+
+
+
+Q22. Demonstrate Compound Assignment Operators
+Question:
+Write a program to demonstrate compound assignment operators (+=, -=, *=, /=, and %=) using a variable. Display the value after each operation.
+
+Sample Input:
+Initial Value = 20
+
+
+Expected Output:
+Initial Value = 20
+After += 5: 25
+After -= 3: 22
+After *= 2: 44
+After /= 4: 11
+After %= 6: 5
+
+
+Logic:
+- a += 5 means a = a + 5
+- a -= 3 means a = a - 3
+- a *= 2 means a = a * 2
+- a /= 4 means a = a / 4
+- a %= 6 means a = a % 6
+Python Code:
+a = 20print("Initial Value =", a)a += 5print("After += 5:", a)a -= 3print("After -= 3:", a)a *= 2print("After *= 2:", a)a //= 4print("After /= 4:", a)a %= 6print("After %= 6:", a)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int a = 20;
+
+    printf("Initial Value = %d\n", a);
+
+    a += 5;
+    printf("After += 5: %d\n", a);
+
+    a -= 3;
+    printf("After -= 3: %d\n", a);
+
+    a *= 2;
+    printf("After *= 2: %d\n", a);
+
+    a /= 4;
+    printf("After /= 4: %d\n", a);
+
+    a %= 6;
+    printf("After %%= 6: %d\n", a);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int a = 20;
+
+        System.out.println("Initial Value = " + a);
+
+        a += 5;
+        System.out.println("After += 5: " + a);
+
+        a -= 3;
+        System.out.println("After -= 3: " + a);
+
+        a *= 2;
+        System.out.println("After *= 2: " + a);
+
+        a /= 4;
+        System.out.println("After /= 4: " + a);
+
+        a %= 6;
+        System.out.println("After %= 6: " + a);
+    }
+}
+
+
+
+Q23. Calculate the Result of Increment and Decrement Operations
+Question:
+Write a program to demonstrate increment and decrement operations. Display the value before and after incrementing and decrementing a variable.
+
+Sample Input:
+Initial Value = 10
+
+
+Expected Output:
+Initial Value = 10
+After Increment = 11
+After Decrement = 10
+
+
+Logic:
+- Increment increases a variable's value by 1.
+- Decrement decreases a variable's value by 1.
+- In C and Java, ++ and -- operators are available.
+- Python uses += 1 and -= 1 instead.
+Python Code:
+number = 10print("Initial Value =", number)number += 1print("After Increment =", number)number -= 1print("After Decrement =", number)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int number = 10;
+
+    printf("Initial Value = %d\n", number);
+
+    ++number;
+    printf("After Increment = %d\n", number);
+
+    --number;
+    printf("After Decrement = %d\n", number);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int number = 10;
+
+        System.out.println("Initial Value = " + number);
+
+        ++number;
+        System.out.println("After Increment = " + number);
+
+        --number;
+        System.out.println("After Decrement = " + number);
+    }
+}
+
+
+
+Q24. Demonstrate Pre-Increment and Post-Increment Operators
+Question:
+Write a program to demonstrate the difference between pre-increment and post-increment operators. Display the value returned by each operation and the final variable value.
+
+Sample Input:
+Initial Value = 5
+
+
+Expected Output:
+Initial Value = 5
+
+Post-Increment Result = 5
+Value After Post-Increment = 6
+
+Pre-Increment Result = 7
+Value After Pre-Increment = 7
+
+
+Logic:
+- Post-increment (a++): Uses the current value first, then increments it.
+- Pre-increment (++a): Increments the value first, then uses it.
+Python Code:
+
+Python does not support ++ or -- operators. We demonstrate the same behavior using assignment operations.
+number = 5print("Initial Value =", number)post_result = numbernumber += 1print("\nPost-Increment Result =", post_result)print("Value After Post-Increment =", number)number += 1pre_result = numberprint("\nPre-Increment Result =", pre_result)print("Value After Pre-Increment =", number)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int number = 5;
+
+    printf("Initial Value = %d\n", number);
+
+    int post_result = number++;
+
+    printf("\nPost-Increment Result = %d\n", post_result);
+    printf("Value After Post-Increment = %d\n", number);
+
+    int pre_result = ++number;
+
+    printf("\nPre-Increment Result = %d\n", pre_result);
+    printf("Value After Pre-Increment = %d\n", number);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int number = 5;
+
+        System.out.println("Initial Value = " + number);
+
+        int postResult = number++;
+
+        System.out.println("\nPost-Increment Result = " + postResult);
+        System.out.println("Value After Post-Increment = " + number);
+
+        int preResult = ++number;
+
+        System.out.println("\nPre-Increment Result = " + preResult);
+        System.out.println("Value After Pre-Increment = " + number);
+    }
+}
+
+
+
+Q25. Calculate the Final Balance Using Compound Assignment Operators
+Question:
+Write a program to calculate the final balance of a bank account using compound assignment operators.
+
+A customer initially deposits ₹10,000. Then the customer deposits ₹5,000, withdraws ₹2,000, receives an additional ₹500, and finally pays a service charge of ₹300. Calculate the final account balance.
+
+Sample Input:
+Initial Balance = 10000
+Additional Deposit = 5000
+Withdrawal = 2000
+Bonus Amount = 500
+Service Charge = 300
+
+
+Expected Output:
+Initial Balance = 10000
+After Deposit = 15000
+After Withdrawal = 13000
+After Bonus = 13500
+After Service Charge = 13200
+
+Final Balance = 13200
+
+
+Logic:
+- Deposit: balance += amount
+- Withdrawal: balance -= amount
+- Bonus: balance += amount
+- Service Charge: balance -= amount
+Python Code:
+balance = 10000deposit = 5000withdrawal = 2000bonus = 500service_charge = 300print("Initial Balance =", balance)balance += depositprint("After Deposit =", balance)balance -= withdrawalprint("After Withdrawal =", balance)balance += bonusprint("After Bonus =", balance)balance -= service_chargeprint("After Service Charge =", balance)print("\nFinal Balance =", balance)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int balance = 10000;
+
+    int deposit = 5000;
+    int withdrawal = 2000;
+    int bonus = 500;
+    int service_charge = 300;
+
+    printf("Initial Balance = %d\n", balance);
+
+    balance += deposit;
+    printf("After Deposit = %d\n", balance);
+
+    balance -= withdrawal;
+    printf("After Withdrawal = %d\n", balance);
+
+    balance += bonus;
+    printf("After Bonus = %d\n", balance);
+
+    balance -= service_charge;
+    printf("After Service Charge = %d\n", balance);
+
+    printf("\nFinal Balance = %d\n", balance);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int balance = 10000;
+
+        int deposit = 5000;
+        int withdrawal = 2000;
+        int bonus = 500;
+        int serviceCharge = 300;
+
+        System.out.println("Initial Balance = " + balance);
+
+        balance += deposit;
+        System.out.println("After Deposit = " + balance);
+
+        balance -= withdrawal;
+        System.out.println("After Withdrawal = " + balance);
+
+        balance += bonus;
+        System.out.println("After Bonus = " + balance);
+
+        balance -= serviceCharge;
+        System.out.println("After Service Charge = " + balance);
+
+        System.out.println("\nFinal Balance = " + balance);
+    }
+}
