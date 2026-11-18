@@ -1621,3 +1621,449 @@ public class Main {
         System.out.println("\nFinal Balance = " + balance);
     }
 }
+
+
+Q26. Demonstrate Multiple Assignment Operations
+Question:
+Write a program to demonstrate multiple assignment operations. Assign values to multiple variables in a single statement, exchange their values, and display the results.
+
+Sample Input:
+A = 10
+B = 20
+C = 30
+
+
+Expected Output:
+Original Values:
+A = 10
+B = 20
+C = 30
+
+After Assignment:
+A = 100
+B = 200
+C = 300
+
+After Swapping:
+A = 300
+B = 100
+C = 200
+
+
+Logic:
+- Assign values to multiple variables.
+- Use multiple assignment to update the variables.
+- Exchange values in a circular order.
+Python Code:
+a, b, c = 10, 20, 30print("Original Values:")print("A =", a)print("B =", b)print("C =", c)a, b, c = 100, 200, 300print("\nAfter Assignment:")print("A =", a)print("B =", b)print("C =", c)a, b, c = c, a, bprint("\nAfter Swapping:")print("A =", a)print("B =", b)print("C =", c)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 20, c = 30;
+
+    printf("Original Values:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+    printf("C = %d\n", c);
+
+    a = 100;
+    b = 200;
+    c = 300;
+
+    printf("\nAfter Assignment:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+    printf("C = %d\n", c);
+
+    int temp = a;
+
+    a = c;
+    c = b;
+    b = temp;
+
+    printf("\nAfter Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+    printf("C = %d\n", c);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int a = 10, b = 20, c = 30;
+
+        System.out.println("Original Values:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+        System.out.println("C = " + c);
+
+        a = 100;
+        b = 200;
+        c = 300;
+
+        System.out.println("\nAfter Assignment:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+        System.out.println("C = " + c);
+
+        int temp = a;
+
+        a = c;
+        c = b;
+        b = temp;
+
+        System.out.println("\nAfter Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+        System.out.println("C = " + c);
+    }
+}
+
+
+
+Q27. Demonstrate Operator Precedence
+Question:
+Write a program to evaluate different arithmetic expressions and demonstrate how operator precedence determines the order of operations.
+
+Sample Input:
+A = 10
+B = 5
+C = 2
+
+
+Expected Output:
+Expression 1 = 20
+Expression 2 = 20
+Expression 3 = 30
+Expression 4 = 60
+Expression 5 = 15
+
+
+Formula / Logic:
+
+The expressions are:
+1. A + B * C
+2. (A + B) * C
+3. A * B - C * 10
+4. A + B * C * 5
+5. A + B - C
+Multiplication and division have higher precedence than addition and subtraction. Parentheses can change the evaluation order.
+
+Python Code:
+a = 10b = 5c = 2result1 = a + b * cresult2 = (a + b) * cresult3 = a * b - c * 10result4 = a + b * c * 5result5 = a + b - cprint("Expression 1 =", result1)print("Expression 2 =", result2)print("Expression 3 =", result3)print("Expression 4 =", result4)print("Expression 5 =", result5)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    int b = 5;
+    int c = 2;
+
+    int result1 = a + b * c;
+    int result2 = (a + b) * c;
+    int result3 = a * b - c * 10;
+    int result4 = a + b * c * 5;
+    int result5 = a + b - c;
+
+    printf("Expression 1 = %d\n", result1);
+    printf("Expression 2 = %d\n", result2);
+    printf("Expression 3 = %d\n", result3);
+    printf("Expression 4 = %d\n", result4);
+    printf("Expression 5 = %d\n", result5);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 5;
+        int c = 2;
+
+        int result1 = a + b * c;
+        int result2 = (a + b) * c;
+        int result3 = a * b - c * 10;
+        int result4 = a + b * c * 5;
+        int result5 = a + b - c;
+
+        System.out.println("Expression 1 = " + result1);
+        System.out.println("Expression 2 = " + result2);
+        System.out.println("Expression 3 = " + result3);
+        System.out.println("Expression 4 = " + result4);
+        System.out.println("Expression 5 = " + result5);
+    }
+}
+
+
+
+Q28. Calculate the Result Using Floor Division and Modulus
+Question:
+Write a program to divide two numbers and calculate the floor division and remainder. Use both positive and negative values to demonstrate the difference in division behavior.
+
+Sample Input:
+A = -17
+B = 5
+
+
+Expected Output:
+Floor Division = -4
+Remainder = 3
+
+
+Formula / Logic:
+- Floor division rounds the quotient down toward negative infinity.
+- Modulus gives the remainder according to the language's division rules.
+- Python's floor division and modulus differ from C and Java for negative operands.
+Python Code:
+a = -17b = 5floor_result = a // bremainder = a % bprint("Floor Division =", floor_result)print("Remainder =", remainder)
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int a = -17;
+    int b = 5;
+
+    int quotient = a / b;
+    int remainder = a % b;
+
+    printf("Integer Division = %d\n", quotient);
+    printf("Remainder = %d\n", remainder);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int a = -17;
+        int b = 5;
+
+        int quotient = a / b;
+        int remainder = a % b;
+
+        System.out.println("Integer Division = " + quotient);
+        System.out.println("Remainder = " + remainder);
+    }
+}
+
+
+Important Note:
+Python produces -4 and 3, while C and Java produce -3 and -2 for integer division and remainder respectively. This is because Python uses floor division, whereas C and Java truncate integer division toward zero.
+
+Q29. Calculate a Mathematical Expression Using Arithmetic Operators
+Question:
+Write a program to calculate the value of a mathematical expression using multiple arithmetic operators.
+
+The expression is:
+\[
+Result = \frac{(A+B)\times(C-D)+E^2}{F}
+\]
+
+Use the given values and display the final result.
+
+Sample Input:
+A = 10
+B = 5
+C = 8
+D = 3
+E = 4
+F = 5
+
+
+Expected Output:
+Result = 31.20
+
+
+Formula / Logic:
+1. Calculate A + B.
+2. Calculate C - D.
+3. Multiply both results.
+4. Calculate the square of E.
+5. Add both results.
+6. Divide by F.
+Python Code:
+a = 10b = 5c = 8d = 3e = 4f = 5result = ((a + b) * (c - d) + e ** 2) / fprint("Result =", round(result, 2))
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    float a = 10;
+    float b = 5;
+    float c = 8;
+    float d = 3;
+    float e = 4;
+    float f = 5;
+
+    float result = ((a + b) * (c - d) + e * e) / f;
+
+    printf("Result = %.2f\n", result);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        double a = 10;
+        double b = 5;
+        double c = 8;
+        double d = 3;
+        double e = 4;
+        double f = 5;
+
+        double result = ((a + b) * (c - d) + Math.pow(e, 2)) / f;
+
+        System.out.printf("Result = %.2f%n", result);
+    }
+}
+
+
+
+Q30. Calculate the Total Cost of Multiple Products
+Question:
+Write a program to calculate the total purchase cost of three products. Each product has a different quantity and unit price. Calculate the subtotal, apply a 5% discount, and then add 18% tax to the discounted amount.
+
+Sample Input:
+Product 1:
+Quantity = 2
+Unit Price = 500
+
+Product 2:
+Quantity = 3
+Unit Price = 200
+
+Product 3:
+Quantity = 1
+Unit Price = 1000
+
+Discount Rate = 5%
+Tax Rate = 18%
+
+
+Expected Output:
+Product 1 Cost = 1000.00
+Product 2 Cost = 600.00
+Product 3 Cost = 1000.00
+
+Subtotal = 2600.00
+Discount Amount = 130.00
+Discounted Amount = 2470.00
+Tax Amount = 444.60
+Final Total = 2914.60
+
+
+Formula / Logic:
+- Product Cost = Quantity × Unit Price
+- Subtotal = Sum of all product costs
+- Discount = Subtotal × 5 / 100
+- Discounted Amount = Subtotal − Discount
+- Tax = Discounted Amount × 18 / 100
+- Final Total = Discounted Amount + Tax
+Python Code:
+quantity1 = 2price1 = 500quantity2 = 3price2 = 200quantity3 = 1price3 = 1000discount_rate = 5tax_rate = 18cost1 = quantity1 * price1cost2 = quantity2 * price2cost3 = quantity3 * price3subtotal = cost1 + cost2 + cost3discount_amount = subtotal * discount_rate / 100discounted_amount = subtotal - discount_amounttax_amount = discounted_amount * tax_rate / 100final_total = discounted_amount + tax_amountprint("Product 1 Cost =", f"{cost1:.2f}")print("Product 2 Cost =", f"{cost2:.2f}")print("Product 3 Cost =", f"{cost3:.2f}")print("\nSubtotal =", f"{subtotal:.2f}")print("Discount Amount =", f"{discount_amount:.2f}")print("Discounted Amount =", f"{discounted_amount:.2f}")print("Tax Amount =", f"{tax_amount:.2f}")print("Final Total =", f"{final_total:.2f}")
+
+
+
+C Code:
+#include <stdio.h>
+
+int main() {
+    int quantity1 = 2;
+    float price1 = 500;
+
+    int quantity2 = 3;
+    float price2 = 200;
+
+    int quantity3 = 1;
+    float price3 = 1000;
+
+    float discount_rate = 5;
+    float tax_rate = 18;
+
+    float cost1 = quantity1 * price1;
+    float cost2 = quantity2 * price2;
+    float cost3 = quantity3 * price3;
+
+    float subtotal = cost1 + cost2 + cost3;
+
+    float discount_amount = subtotal * discount_rate / 100;
+    float discounted_amount = subtotal - discount_amount;
+
+    float tax_amount = discounted_amount * tax_rate / 100;
+
+    float final_total = discounted_amount + tax_amount;
+
+    printf("Product 1 Cost = %.2f\n", cost1);
+    printf("Product 2 Cost = %.2f\n", cost2);
+    printf("Product 3 Cost = %.2f\n", cost3);
+
+    printf("\nSubtotal = %.2f\n", subtotal);
+    printf("Discount Amount = %.2f\n", discount_amount);
+    printf("Discounted Amount = %.2f\n", discounted_amount);
+    printf("Tax Amount = %.2f\n", tax_amount);
+    printf("Final Total = %.2f\n", final_total);
+
+    return 0;
+}
+
+
+Java Code:
+public class Main {
+    public static void main(String[] args) {
+        int quantity1 = 2;
+        double price1 = 500;
+
+        int quantity2 = 3;
+        double price2 = 200;
+
+        int quantity3 = 1;
+        double price3 = 1000;
+
+        double discountRate = 5;
+        double taxRate = 18;
+
+        double cost1 = quantity1 * price1;
+        double cost2 = quantity2 * price2;
+        double cost3 = quantity3 * price3;
+
+        double subtotal = cost1 + cost2 + cost3;
+
+        double discountAmount = subtotal * discountRate / 100;
+        double discountedAmount = subtotal - discountAmount;
+
+        double taxAmount = discountedAmount * taxRate / 100;
+
+        double finalTotal = discountedAmount + taxAmount;
+
+        System.out.printf("Product 1 Cost = %.2f%n", cost1);
+        System.out.printf("Product 2 Cost = %.2f%n", cost2);
+        System.out.printf("Product 3 Cost = %.2f%n", cost3);
+
+        System.out.printf("%nSubtotal = %.2f%n", subtotal);
+        System.out.printf("Discount Amount = %.2f%n", discountAmount);
+        System.out.printf("Discounted Amount = %.2f%n", discountedAmount);
+        System.out.printf("Tax Amount = %.2f%n", taxAmount);
+        System.out.printf("Final Total = %.2f%n", finalTotal);
+    }
+}
+
