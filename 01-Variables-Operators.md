@@ -296,4 +296,757 @@ public class Main
 </tr>
 </table>
 
+Q4. Swap Two Variables Using a Third Variable
+Write a program to input two numbers and swap their values using a third temporary variable.
+
+Sample Input
+Enter A: 10
+Enter B: 20
+
+
+Expected Output
+Before Swapping:
+A = 10
+B = 20
+
+After Swapping:
+A = 20
+B = 10
+
+
+
+<table>
+<tr><th>Python</th><th>C</th><th>Java</th></tr>
+<tr>
+<td valign="top"><pre><code>a = int(input("Enter A: "))
+b = int(input("Enter B: "))
+
+print("Before Swapping:")
+print("A =", a)
+print("B =", b)
+
+# Swap using temporary variable
+
+temp = a
+a = b
+b = temp
+
+print("After Swapping:")
+print("A =", a)
+print("B =", b)</code></pre></td>
+<td valign="top"><pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a, b, temp;
+
+    printf("Enter A: ");
+    scanf("%d", &amp;a);
+
+    printf("Enter B: ");
+    scanf("%d", &amp;b);
+
+    printf("Before Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+
+    // Swap using temporary variable
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("After Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+
+    return 0;
+}</code></pre></td>
+<td valign="top"><pre><code>import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, temp;
+
+        System.out.print("Enter A: ");
+        a = sc.nextInt();
+
+        System.out.print("Enter B: ");
+        b = sc.nextInt();
+
+        System.out.println("Before Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+
+        // Swap using temporary variable
+
+        temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+
+        sc.close();
+    }
+}</code></pre></td>
+</tr>
+</table>
+
+
+
+
+Q5. Swap Two Variables Without a Third Variable
+Write a program to input two integer numbers and swap their values without using a third variable. Use arithmetic operators.
+
+Sample Input
+Enter A: 15
+Enter B: 25
+
+
+Expected Output
+Before Swapping:
+A = 15
+B = 25
+
+After Swapping:
+A = 25
+B = 15
+
+
+
+<table>
+<tr><th>Python</th><th>C</th><th>Java</th></tr>
+<tr>
+<td valign="top"><pre><code>a = int(input("Enter A: "))
+b = int(input("Enter B: "))
+
+print("Before Swapping:")
+print("A =", a)
+print("B =", b)
+
+# Swap without third variable
+
+a = a + b
+b = a - b
+a = a - b
+
+print("After Swapping:")
+print("A =", a)
+print("B =", b)</code></pre></td>
+<td valign="top"><pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a, b;
+
+    printf("Enter A: ");
+    scanf("%d", &amp;a);
+
+    printf("Enter B: ");
+    scanf("%d", &amp;b);
+
+    printf("Before Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+
+    // Swap without third variable
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    printf("After Swapping:\n");
+    printf("A = %d\n", a);
+    printf("B = %d\n", b);
+
+    return 0;
+}</code></pre></td>
+<td valign="top"><pre><code>import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter A: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter B: ");
+        int b = sc.nextInt();
+
+        System.out.println("Before Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+
+        // Swap without third variable
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        System.out.println("After Swapping:");
+        System.out.println("A = " + a);
+        System.out.println("B = " + b);
+
+        sc.close();
+    }
+}</code></pre></td>
+</tr>
+</table>
+
+
+
+Note: Arithmetic swapping can overflow for large integer values. It is useful for understanding operators, but a temporary variable is generally safer.
+
+Q6. Calculate Area and Circumference of a Circle
+Write a program to input the radius of a circle and calculate its area and circumference.
+
+Formula
+\[
+Area = \pi r^2
+\]
+
+\[
+Circumference = 2\pi r
+\]
+
+Sample Input
+Enter radius: 7
+
+
+Expected Output
+Area = 153.94
+Circumference = 43.98
+
+
+
+<table>
+<tr><th>Python</th><th>C</th><th>Java</th></tr>
+<tr>
+<td valign="top"><pre><code>import math
+
+# Input radius
+
+radius = float(input("Enter radius: "))
+
+# Calculate area
+
+area = math.pi * radius ** 2
+
+# Calculate circumference
+
+circumference = 2 * math.pi * radius
+
+# Display results
+
+print("Area =", round(area, 2))
+print("Circumference =", round(circumference, 2))</code></pre></td>
+<td valign="top"><pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    float radius;
+    float area, circumference;
+
+    const float PI = 3.14159265;
+
+    // Input radius
+
+    printf("Enter radius: ");
+    scanf("%f", &amp;radius);
+
+    // Calculate area
+
+    area = PI * radius * radius;
+
+    // Calculate circumference
+
+    circumference = 2 * PI * radius;
+
+    // Display results
+
+    printf("Area = %.2f\n", area);
+    printf("Circumference = %.2f\n", circumference);
+
+    return 0;
+}</code></pre></td>
+<td valign="top"><pre><code>import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        final double PI = Math.PI;
+
+        // Input radius
+
+        System.out.print("Enter radius: ");
+        double radius = sc.nextDouble();
+
+        // Calculate area
+
+        double area = PI * Math.pow(radius, 2);
+
+        // Calculate circumference
+
+        double circumference = 2 * PI * radius;
+
+        // Display results
+
+        System.out.printf("Area = %.2f%n", area);
+        System.out.printf("Circumference = %.2f%n", circumference);
+
+        sc.close();
+    }
+}</code></pre></td>
+</tr>
+</table>
+
+
+
+
+Q7. Calculate Simple Interest
+Write a program to input the principal amount, annual interest rate, and time in years. Calculate simple interest and total amount.
+
+Formula
+\[
+SI = \frac{P \times R \times T}{100}
+\]
+
+\[
+Total = P + SI
+\]
+
+Sample Input
+Principal Amount: 10000
+Interest Rate: 5
+Time: 2
+
+
+Expected Output
+Simple Interest = 1000.00
+Total Amount = 11000.00
+
+
+
+<table>
+<tr><th>Python</th><th>C</th><th>Java</th></tr>
+<tr>
+<td valign="top"><pre><code># Input details
+
+principal = float(input("Principal Amount: "))
+rate = float(input("Interest Rate: "))
+time = float(input("Time in years: "))
+
+# Calculate simple interest
+
+simple_interest = (
+    principal * rate * time
+) / 100
+
+# Calculate total amount
+
+total_amount = principal + simple_interest
+
+# Display results
+
+print(
+    "Simple Interest =",
+    round(simple_interest, 2)
+)
+
+print(
+    "Total Amount =",
+    round(total_amount, 2)
+)</code></pre></td>
+<td valign="top"><pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    float principal, rate, time;
+    float simple_interest, total_amount;
+
+    // Input details
+
+    printf("Principal Amount: ");
+    scanf("%f", &amp;principal);
+
+    printf("Interest Rate: ");
+    scanf("%f", &amp;rate);
+
+    printf("Time in years: ");
+    scanf("%f", &amp;time);
+
+    // Calculate simple interest
+
+    simple_interest =
+        (principal * rate * time) / 100;
+
+    // Calculate total amount
+
+    total_amount = principal + simple_interest;
+
+    // Display results
+
+    printf("Simple Interest = %.2f\n", simple_interest);
+    printf("Total Amount = %.2f\n", total_amount);
+
+    return 0;
+}</code></pre></td>
+<td valign="top"><pre><code>import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        // Input details
+
+        System.out.print("Principal Amount: ");
+        double principal = sc.nextDouble();
+
+        System.out.print("Interest Rate: ");
+        double rate = sc.nextDouble();
+
+        System.out.print("Time in years: ");
+        double time = sc.nextDouble();
+
+        // Calculate simple interest
+
+        double simpleInterest =
+            (principal * rate * time) / 100;
+
+        // Calculate total amount
+
+        double totalAmount = principal + simpleInterest;
+
+        // Display results
+
+        System.out.printf("Simple Interest = %.2f%n", simpleInterest);
+        System.out.printf("Total Amount = %.2f%n", totalAmount);
+
+        sc.close();
+    }
+}</code></pre></td>
+</tr>
+</table>
+
+
+
+
+Q8. Convert Celsius to Fahrenheit
+Write a program to input temperature in Celsius and convert it into Fahrenheit.
+
+Formula
+\[
+F = (C \times \frac{9}{5}) + 32
+\]
+
+Sample Input
+Enter temperature in Celsius: 37
+
+
+Expected Output
+Temperature in Fahrenheit = 98.60
+
+
+
+<table>
+<tr><th>Python</th><th>C</th><th>Java</th></tr>
+<tr>
+<td valign="top"><pre><code># Input temperature
+
+celsius = float(
+    input("Enter temperature in Celsius: ")
+)
+
+# Convert Celsius to Fahrenheit
+
+fahrenheit = (celsius * 9 / 5) + 32
+
+# Display result
+
+print(
+    "Temperature in Fahrenheit =",
+    round(fahrenheit, 2)
+)</code></pre></td>
+<td valign="top"><pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    float celsius, fahrenheit;
+
+    // Input temperature
+
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &amp;celsius);
+
+    // Convert Celsius to Fahrenheit
+
+    fahrenheit = (celsius * 9.0 / 5.0) + 32;
+
+    // Display result
+
+    printf(
+        "Temperature in Fahrenheit = %.2f\n",
+        fahrenheit
+    );
+
+    return 0;
+}</code></pre></td>
+<td valign="top"><pre><code>import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        // Input temperature
+
+        System.out.print("Enter temperature in Celsius: ");
+        double celsius = sc.nextDouble();
+
+        // Convert Celsius to Fahrenheit
+
+        double fahrenheit =
+            (celsius * 9.0 / 5.0) + 32;
+
+        // Display result
+
+        System.out.printf(
+            "Temperature in Fahrenheit = %.2f%n",
+            fahrenheit
+        );
+
+        sc.close();
+    }
+}</code></pre></td>
+</tr>
+</table>
+
+
+
+
+Q9. Convert Seconds into Hours, Minutes and Seconds
+Write a program to input total seconds and convert them into hours, minutes, and remaining seconds using arithmetic operators.
+
+Sample Input
+Enter total seconds: 3675
+
+
+Expected Output
+Hours: 1
+Minutes: 1
+Seconds: 15
+
+
+Logic
+- Hours = Total Seconds // 3600
+- Remaining Seconds = Total Seconds % 3600
+- Minutes = Remaining Seconds // 60
+- Seconds = Remaining Seconds % 60
+
+<table>
+<tr><th>Python</th><th>C</th><th>Java</th></tr>
+<tr>
+<td valign="top"><pre><code># Input total seconds
+
+total_seconds = int(
+    input("Enter total seconds: ")
+)
+
+# Calculate hours
+
+hours = total_seconds // 3600
+
+# Calculate remaining seconds
+
+remaining_seconds = total_seconds % 3600
+
+# Calculate minutes
+
+minutes = remaining_seconds // 60
+
+# Calculate final seconds
+
+seconds = remaining_seconds % 60
+
+# Display results
+
+print("Hours:", hours)
+print("Minutes:", minutes)
+print("Seconds:", seconds)</code></pre></td>
+<td valign="top"><pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int total_seconds;
+    int hours, minutes, seconds;
+    int remaining_seconds;
+
+    // Input total seconds
+
+    printf("Enter total seconds: ");
+    scanf("%d", &amp;total_seconds);
+
+    // Calculate hours
+
+    hours = total_seconds / 3600;
+
+    // Calculate remaining seconds
+
+    remaining_seconds = total_seconds % 3600;
+
+    // Calculate minutes
+
+    minutes = remaining_seconds / 60;
+
+    // Calculate final seconds
+
+    seconds = remaining_seconds % 60;
+
+    // Display results
+
+    printf("Hours: %d\n", hours);
+    printf("Minutes: %d\n", minutes);
+    printf("Seconds: %d\n", seconds);
+
+    return 0;
+}</code></pre></td>
+<td valign="top"><pre><code>import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        // Input total seconds
+
+        System.out.print("Enter total seconds: ");
+        int totalSeconds = sc.nextInt();
+
+        // Calculate hours
+
+        int hours = totalSeconds / 3600;
+
+        // Calculate remaining seconds
+
+        int remainingSeconds = totalSeconds % 3600;
+
+        // Calculate minutes
+
+        int minutes = remainingSeconds / 60;
+
+        // Calculate final seconds
+
+        int seconds = remainingSeconds % 60;
+
+        // Display results
+
+        System.out.println("Hours: " + hours);
+        System.out.println("Minutes: " + minutes);
+        System.out.println("Seconds: " + seconds);
+
+        sc.close();
+    }
+}</code></pre></td>
+</tr>
+</table>
+
+
+
+
+Q10. Demonstrate Different Data Types
+Write a program to declare and initialize variables of different data types: integer, floating-point, character, string, and boolean. Display their values.
+
+Sample Input
+
+No user input required.
+
+Expected Output
+Integer: 100
+Float: 25.5
+Character: A
+String: Programming
+Boolean: True
+
+
+
+<table>
+<tr><th>Python</th><th>C</th><th>Java</th></tr>
+<tr>
+<td valign="top"><pre><code># Declare variables
+
+integer_value = 100
+float_value = 25.5
+character_value = 'A'
+string_value = "Programming"
+boolean_value = True
+
+# Display values
+
+print("Integer:", integer_value)
+print("Float:", float_value)
+print("Character:", character_value)
+print("String:", string_value)
+print("Boolean:", boolean_value)</code></pre></td>
+<td valign="top"><pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdbool.h&gt;
+
+int main()
+{
+    // Declare variables
+
+    int integer_value = 100;
+    float float_value = 25.5;
+    char character_value = 'A';
+    char string_value[] = "Programming";
+    bool boolean_value = true;
+
+    // Display values
+
+    printf("Integer: %d\n", integer_value);
+    printf("Float: %.1f\n", float_value);
+    printf("Character: %c\n", character_value);
+    printf("String: %s\n", string_value);
+    printf("Boolean: %s\n",
+           boolean_value ? "True" : "False");
+
+    return 0;
+}</code></pre></td>
+<td valign="top"><pre><code>public class Main
+{
+    public static void main(String[] args)
+    {
+        // Declare variables
+
+        int integerValue = 100;
+        float floatValue = 25.5f;
+        char characterValue = 'A';
+        String stringValue = "Programming";
+        boolean booleanValue = true;
+
+        // Display values
+
+        System.out.println("Integer: " + integerValue);
+        System.out.println("Float: " + floatValue);
+        System.out.println("Character: " + characterValue);
+        System.out.println("String: " + stringValue);
+        System.out.println("Boolean: " + booleanValue);
+    }
+}</code></pre></td>
+</tr>
+</table>
 
