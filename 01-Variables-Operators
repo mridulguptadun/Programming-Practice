@@ -2067,3 +2067,1358 @@ public class Main {
     }
 }
 
+Q31. Unary Minus and Unary Plus Operators
+Difficulty: Easy
+
+Question (English):
+
+Write a program to input an integer and display its positive and negative values using unary plus (+) and unary minus (-) operators.
+
+Sample Input:
+Enter a number: 25
+
+
+Expected Output:
+Original Number: 25
+Positive Value: 25
+Negative Value: -25
+
+
+Formula / Logic:
+- Unary plus (+): Keeps the number positive.
+- Unary minus (-): Changes the sign of the number.
+1. Python Code
+num = int(input("Enter a number: "))positive = +numnegative = -numprint("Original Number:", num)print("Positive Value:", positive)print("Negative Value:", negative)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num, positive, negative;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    positive = +num;
+    negative = -num;
+
+    printf("Original Number: %d\n", num);
+    printf("Positive Value: %d\n", positive);
+    printf("Negative Value: %d\n", negative);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int positive = +num;
+        int negative = -num;
+
+        System.out.println("Original Number: " + num);
+        System.out.println("Positive Value: " + positive);
+        System.out.println("Negative Value: " + negative);
+
+        sc.close();
+    }
+}
+
+
+
+Q32. Absolute Value Using Unary Logic
+Difficulty: Easy
+
+Question (English):
+
+Write a program to input an integer and calculate its absolute value without using any built-in absolute value function.
+
+Sample Input:
+Enter a number: -45
+
+
+Expected Output:
+Original Number: -45
+Absolute Value: 45
+
+
+Formula / Logic:
+\[
+AbsoluteValue =
+\begin{cases}
+-num & \text{if num < 0}\\
+num & \text{otherwise}
+\end{cases}
+\]
+
+Hinglish: Agar number negative hai toh unary minus se uska sign change kar denge. Otherwise number same rahega.
+1. Python Code
+num = int(input("Enter a number: "))if num < 0:    absolute = -numelse:    absolute = numprint("Original Number:", num)print("Absolute Value:", absolute)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num, absolute;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        absolute = -num;
+    } else {
+        absolute = num;
+    }
+
+    printf("Original Number: %d\n", num);
+    printf("Absolute Value: %d\n", absolute);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int absolute;
+
+        if (num < 0) {
+            absolute = -num;
+        } else {
+            absolute = num;
+        }
+
+        System.out.println("Original Number: " + num);
+        System.out.println("Absolute Value: " + absolute);
+
+        sc.close();
+    }
+}
+
+
+
+Q33. Compound Assignment Operators
+Difficulty: Easy
+
+Question (English):
+
+Write a program to input an initial balance and perform addition, subtraction, multiplication, division and modulus operations using compound assignment operators.
+
+Sample Input:
+Enter initial balance: 100
+Enter value: 10
+
+
+Expected Output:
+After Addition: 110
+After Subtraction: 100
+After Multiplication: 1000
+After Division: 100
+After Modulus: 0
+
+
+Formula / Logic:
+- += Addition assignment
+- -= Subtraction assignment
+- *= Multiplication assignment
+- /= Division assignment
+- %= Modulus assignment
+Har operation ke liye original balance ko reset karenge, taaki sabhi results same initial value se calculate hon.
+1. Python Code
+balance = int(input("Enter initial balance: "))value = int(input("Enter value: "))result = balanceresult += valueprint("After Addition:", result)result = balanceresult -= valueprint("After Subtraction:", result)result = balanceresult *= valueprint("After Multiplication:", result)result = balanceresult //= valueprint("After Division:", result)result = balanceresult %= valueprint("After Modulus:", result)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int balance, value, result;
+
+    printf("Enter initial balance: ");
+    scanf("%d", &balance);
+
+    printf("Enter value: ");
+    scanf("%d", &value);
+
+    result = balance;
+    result += value;
+    printf("After Addition: %d\n", result);
+
+    result = balance;
+    result -= value;
+    printf("After Subtraction: %d\n", result);
+
+    result = balance;
+    result *= value;
+    printf("After Multiplication: %d\n", result);
+
+    result = balance;
+    result /= value;
+    printf("After Division: %d\n", result);
+
+    result = balance;
+    result %= value;
+    printf("After Modulus: %d\n", result);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter initial balance: ");
+        int balance = sc.nextInt();
+
+        System.out.print("Enter value: ");
+        int value = sc.nextInt();
+
+        int result;
+
+        result = balance;
+        result += value;
+        System.out.println("After Addition: " + result);
+
+        result = balance;
+        result -= value;
+        System.out.println("After Subtraction: " + result);
+
+        result = balance;
+        result *= value;
+        System.out.println("After Multiplication: " + result);
+
+        result = balance;
+        result /= value;
+        System.out.println("After Division: " + result);
+
+        result = balance;
+        result %= value;
+        System.out.println("After Modulus: " + result);
+
+        sc.close();
+    }
+}
+
+
+
+Q34. Assignment Expression (Walrus Operator)
+Difficulty: Medium
+
+Question (English):
+
+Write a Python program to input a number, assign its value to a variable inside an expression, and display whether the number is greater than 100.
+
+Sample Input:
+Enter a number: 150
+
+
+Expected Output:
+Entered Number: 150
+Is Number Greater Than 100? True
+
+
+Formula / Logic:
+
+Python provides the assignment expression operator :=, also known as the Walrus operator.
+
+It assigns a value to a variable while evaluating an expression.
+
+Important language difference:
+- Python supports :=.
+- C and Java do not have Python's Walrus operator.
+- We will use normal assignment followed by comparison in C and Java to produce equivalent results.
+1. Python Code
+if (num := int(input("Enter a number: "))) >= 0:    result = num > 100else:    result = num > 100print("Entered Number:", num)print("Is Number Greater Than 100?", result)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num;
+    int result;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    result = (num > 100);
+
+    printf("Entered Number: %d\n", num);
+    printf("Is Number Greater Than 100? %s\n",
+           result ? "True" : "False");
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        boolean result = num > 100;
+
+        System.out.println("Entered Number: " + num);
+        System.out.println("Is Number Greater Than 100? " + result);
+
+        sc.close();
+    }
+}
+
+
+
+Q35. Mixed Arithmetic Using Assignment Operators
+Difficulty: Medium
+
+Question (English):
+
+Write a program to input three numbers representing the price of a product, discount percentage and tax percentage. Calculate the discounted price, tax amount and final payable amount using compound assignment operators.
+
+Sample Input:
+Enter product price: 2000
+Enter discount percentage: 10
+Enter tax percentage: 5
+
+
+Expected Output:
+Original Price: 2000.00
+Discount Amount: 200.00
+Price After Discount: 1800.00
+Tax Amount: 90.00
+Final Payable Amount: 1890.00
+
+
+Formula / Logic:
+
+1. Discount Amount:
+\[
+Discount = \frac{Price \times DiscountRate}{100}
+\]
+
+2. Discounted Price:
+\[
+DiscountedPrice = Price - Discount
+\]
+
+3. Tax Amount:
+\[
+Tax = \frac{DiscountedPrice \times TaxRate}{100}
+\]
+
+4. Final Amount:
+\[
+FinalAmount = DiscountedPrice + Tax
+\]
+
+1. Python Code
+price = float(input("Enter product price: "))discount_rate = float(input("Enter discount percentage: "))tax_rate = float(input("Enter tax percentage: "))discount = price * discount_rate / 100discounted_price = pricediscounted_price -= discounttax = discounted_price * tax_rate / 100final_amount = discounted_pricefinal_amount += taxprint(f"Original Price: {price:.2f}")print(f"Discount Amount: {discount:.2f}")print(f"Price After Discount: {discounted_price:.2f}")print(f"Tax Amount: {tax:.2f}")print(f"Final Payable Amount: {final_amount:.2f}")
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    float price, discount_rate, tax_rate;
+    float discount, discounted_price;
+    float tax, final_amount;
+
+    printf("Enter product price: ");
+    scanf("%f", &price);
+
+    printf("Enter discount percentage: ");
+    scanf("%f", &discount_rate);
+
+    printf("Enter tax percentage: ");
+    scanf("%f", &tax_rate);
+
+    discount = price * discount_rate / 100;
+
+    discounted_price = price;
+    discounted_price -= discount;
+
+    tax = discounted_price * tax_rate / 100;
+
+    final_amount = discounted_price;
+    final_amount += tax;
+
+    printf("Original Price: %.2f\n", price);
+    printf("Discount Amount: %.2f\n", discount);
+    printf("Price After Discount: %.2f\n", discounted_price);
+    printf("Tax Amount: %.2f\n", tax);
+    printf("Final Payable Amount: %.2f\n", final_amount);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter product price: ");
+        double price = sc.nextDouble();
+
+        System.out.print("Enter discount percentage: ");
+        double discountRate = sc.nextDouble();
+
+        System.out.print("Enter tax percentage: ");
+        double taxRate = sc.nextDouble();
+
+        double discount = price * discountRate / 100;
+
+        double discountedPrice = price;
+        discountedPrice -= discount;
+
+        double tax = discountedPrice * taxRate / 100;
+
+        double finalAmount = discountedPrice;
+        finalAmount += tax;
+
+        System.out.printf("Original Price: %.2f%n", price);
+        System.out.printf("Discount Amount: %.2f%n", discount);
+        System.out.printf("Price After Discount: %.2f%n", discountedPrice);
+        System.out.printf("Tax Amount: %.2f%n", tax);
+        System.out.printf("Final Payable Amount: %.2f%n", finalAmount);
+
+        sc.close();
+    }
+}
+
+Q36. Equal To and Not Equal To Operators
+Difficulty: Easy
+
+Question (English):
+
+Write a program to input two integers and check whether they are equal or not equal using comparison operators.
+
+Sample Input:
+Enter first number: 25
+Enter second number: 30
+
+
+Expected Output:
+Are numbers equal? False
+Are numbers not equal? True
+
+
+Formula / Logic:
+- == checks whether two values are equal.
+- != checks whether two values are different.
+1. Python Code
+num1 = int(input("Enter first number: "))num2 = int(input("Enter second number: "))equal = num1 == num2not_equal = num1 != num2print("Are numbers equal?", equal)print("Are numbers not equal?", not_equal)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+    int equal = (num1 == num2);
+    int not_equal = (num1 != num2);
+
+    printf("Are numbers equal? %s\n", equal ? "True" : "False");
+    printf("Are numbers not equal? %s\n", not_equal ? "True" : "False");
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        boolean equal = num1 == num2;
+        boolean notEqual = num1 != num2;
+
+        System.out.println("Are numbers equal? " + equal);
+        System.out.println("Are numbers not equal? " + notEqual);
+
+        sc.close();
+    }
+}
+
+
+
+Q37. Greater Than and Less Than Operators
+Difficulty: Easy
+
+Question (English):
+
+Write a program to input two numbers and determine which number is greater, smaller or whether both numbers are equal using comparison operators.
+
+Sample Input:
+Enter first number: 45
+Enter second number: 30
+
+
+Expected Output:
+First number is greater: True
+First number is smaller: False
+Both numbers are equal: False
+
+
+Formula / Logic:
+- > Greater than
+- < Less than
+- >= Greater than or equal to
+- <= Less than or equal to
+1. Python Code
+num1 = int(input("Enter first number: "))num2 = int(input("Enter second number: "))print("First number is greater:", num1 > num2)print("First number is smaller:", num1 < num2)print("Both numbers are equal:", num1 == num2)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+    printf("First number is greater: %s\n",
+           num1 > num2 ? "True" : "False");
+
+    printf("First number is smaller: %s\n",
+           num1 < num2 ? "True" : "False");
+
+    printf("Both numbers are equal: %s\n",
+           num1 == num2 ? "True" : "False");
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        System.out.println("First number is greater: " + (num1 > num2));
+        System.out.println("First number is smaller: " + (num1 < num2));
+        System.out.println("Both numbers are equal: " + (num1 == num2));
+
+        sc.close();
+    }
+}
+
+
+
+Q38. Logical AND, OR and NOT Operators
+Difficulty: Easy
+
+Question (English):
+
+Write a program to input a student's marks in two subjects and check the following conditions:
+1. Whether the student passed both subjects (marks must be at least 40 in each subject).
+2. Whether the student passed at least one subject.
+3. Whether the student failed in both subjects.
+Use logical AND, OR and NOT operators.
+
+Sample Input:
+Enter marks in Subject 1: 75
+Enter marks in Subject 2: 30
+
+
+Expected Output:
+Passed Both Subjects: False
+Passed At Least One Subject: True
+Failed Both Subjects: False
+
+
+Formula / Logic:
+
+Let:
+- A = Marks1 >= 40
+- B = Marks2 >= 40
+Logical operations:
+- AND: A && B / A and B
+- OR: A || B / A or B
+- NOT: !(A or B) / not (A or B)
+Hinglish: AND mein dono conditions true honi chahiye, OR mein kam se kam ek true aur NOT result ko reverse karta hai.
+1. Python Code
+marks1 = int(input("Enter marks in Subject 1: "))marks2 = int(input("Enter marks in Subject 2: "))passed1 = marks1 >= 40passed2 = marks2 >= 40passed_both = passed1 and passed2passed_one = passed1 or passed2failed_both = not (passed1 or passed2)print("Passed Both Subjects:", passed_both)print("Passed At Least One Subject:", passed_one)print("Failed Both Subjects:", failed_both)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int marks1, marks2;
+
+    printf("Enter marks in Subject 1: ");
+    scanf("%d", &marks1);
+
+    printf("Enter marks in Subject 2: ");
+    scanf("%d", &marks2);
+
+    int passed1 = marks1 >= 40;
+    int passed2 = marks2 >= 40;
+
+    int passed_both = passed1 && passed2;
+    int passed_one = passed1 || passed2;
+    int failed_both = !(passed1 || passed2);
+
+    printf("Passed Both Subjects: %s\n",
+           passed_both ? "True" : "False");
+
+    printf("Passed At Least One Subject: %s\n",
+           passed_one ? "True" : "False");
+
+    printf("Failed Both Subjects: %s\n",
+           failed_both ? "True" : "False");
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter marks in Subject 1: ");
+        int marks1 = sc.nextInt();
+
+        System.out.print("Enter marks in Subject 2: ");
+        int marks2 = sc.nextInt();
+
+        boolean passed1 = marks1 >= 40;
+        boolean passed2 = marks2 >= 40;
+
+        boolean passedBoth = passed1 && passed2;
+        boolean passedOne = passed1 || passed2;
+        boolean failedBoth = !(passed1 || passed2);
+
+        System.out.println("Passed Both Subjects: " + passedBoth);
+        System.out.println("Passed At Least One Subject: " + passedOne);
+        System.out.println("Failed Both Subjects: " + failedBoth);
+
+        sc.close();
+    }
+}
+
+
+
+Q39. Bitwise AND, OR and XOR Operators
+Difficulty: Medium
+
+Question (English):
+
+Write a program to input two positive integers and perform bitwise AND, OR and XOR operations. Display the results of all three operations.
+
+Sample Input:
+Enter first number: 12
+Enter second number: 10
+
+
+Expected Output:
+Bitwise AND: 8
+Bitwise OR: 14
+Bitwise XOR: 6
+
+
+Formula / Logic:
+
+Binary representation:
+12 = 1100
+10 = 1010
+-----------
+AND  1000 = 8
+OR   1110 = 14
+XOR  0110 = 6
+
+
+- & AND: Both bits must be 1.
+- | OR: At least one bit must be 1.
+- ^ XOR: Bits must be different.
+1. Python Code
+num1 = int(input("Enter first number: "))num2 = int(input("Enter second number: "))and_result = num1 & num2or_result = num1 | num2xor_result = num1 ^ num2print("Bitwise AND:", and_result)print("Bitwise OR:", or_result)print("Bitwise XOR:", xor_result)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+    int and_result = num1 & num2;
+    int or_result = num1 | num2;
+    int xor_result = num1 ^ num2;
+
+    printf("Bitwise AND: %d\n", and_result);
+    printf("Bitwise OR: %d\n", or_result);
+    printf("Bitwise XOR: %d\n", xor_result);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        int andResult = num1 & num2;
+        int orResult = num1 | num2;
+        int xorResult = num1 ^ num2;
+
+        System.out.println("Bitwise AND: " + andResult);
+        System.out.println("Bitwise OR: " + orResult);
+        System.out.println("Bitwise XOR: " + xorResult);
+
+        sc.close();
+    }
+}
+
+
+
+Q40. Left Shift and Right Shift Operators
+Difficulty: Medium
+
+Question (English):
+
+Write a program to input an integer and perform left shift and right shift operations by two positions. Display both results.
+
+Sample Input:
+Enter a number: 20
+
+
+Expected Output:
+Original Number: 20
+After Left Shift by 2: 80
+After Right Shift by 2: 5
+
+
+Formula / Logic:
+- Left Shift (<<): Shifts bits towards the left.
+- Right Shift (>>): Shifts bits towards the right.
+For positive integers:
+\[
+LeftShift = Number \times 2^n
+\]
+
+\[
+RightShift = Number \div 2^n
+\]
+
+Here, \(n = 2\).
+
+Binary representation:
+20 = 00010100
+
+Left Shift:
+00010100 → 01010000 = 80
+
+Right Shift:
+00010100 → 00000101 = 5
+
+
+1. Python Code
+num = int(input("Enter a number: "))left_shift = num << 2right_shift = num >> 2print("Original Number:", num)print("After Left Shift by 2:", left_shift)print("After Right Shift by 2:", right_shift)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    int left_shift = num << 2;
+    int right_shift = num >> 2;
+
+    printf("Original Number: %d\n", num);
+    printf("After Left Shift by 2: %d\n", left_shift);
+    printf("After Right Shift by 2: %d\n", right_shift);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int leftShift = num << 2;
+        int rightShift = num >> 2;
+
+        System.out.println("Original Number: " + num);
+        System.out.println("After Left Shift by 2: " + leftShift);
+        System.out.println("After Right Shift by 2: " + rightShift);
+
+        sc.close();
+    }
+}
+
+Q41. Bitwise NOT Operator
+Difficulty: Medium
+
+Question (English):
+
+Write a program to input an integer and perform the bitwise NOT operation. Display the original number and its bitwise NOT result.
+
+Sample Input:
+Enter a number: 12
+
+
+Expected Output:
+Original Number: 12
+Bitwise NOT Result: -13
+
+
+Formula / Logic:
+
+Bitwise NOT (~) reverses every bit:
+- 0 becomes 1.
+- 1 becomes 0.
+For signed integers using two's complement representation:
+\[
+\sim n = -(n+1)
+\]
+
+Example:
+12 = 00001100
+~12 = 11110011 = -13
+
+
+1. Python Code
+num = int(input("Enter a number: "))result = ~numprint("Original Number:", num)print("Bitwise NOT Result:", result)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    int result = ~num;
+
+    printf("Original Number: %d\n", num);
+    printf("Bitwise NOT Result: %d\n", result);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int result = ~num;
+
+        System.out.println("Original Number: " + num);
+        System.out.println("Bitwise NOT Result: " + result);
+
+        sc.close();
+    }
+}
+
+
+
+Q42. Combined Comparison and Logical Operators
+Difficulty: Medium
+
+Question (English):
+
+Write a program to input a person's age and monthly income. Check whether the person is eligible for a premium membership based on the following conditions:
+1. Age must be at least 18 years.
+2. Monthly income must be at least ₹30,000.
+3. The person must satisfy both conditions.
+Also check whether the person satisfies at least one condition.
+
+Sample Input:
+Enter age: 25
+Enter monthly income: 20000
+
+
+Expected Output:
+Eligible for Premium Membership: False
+Meets At Least One Condition: True
+
+
+Formula / Logic:
+
+Let:
+- A = Age >= 18
+- B = Monthly Income >= 30000
+\[
+Eligibility = A \ AND \ B
+\]
+
+\[
+AtLeastOne = A \ OR \ B
+\]
+
+Hinglish: Membership ke liye dono conditions satisfy karni hongi, lekin second result mein sirf ek condition bhi sufficient hai.
+1. Python Code
+age = int(input("Enter age: "))income = float(input("Enter monthly income: "))age_condition = age >= 18income_condition = income >= 30000eligible = age_condition and income_conditionat_least_one = age_condition or income_conditionprint("Eligible for Premium Membership:", eligible)print("Meets At Least One Condition:", at_least_one)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int age;
+    float income;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Enter monthly income: ");
+    scanf("%f", &income);
+
+    int age_condition = age >= 18;
+    int income_condition = income >= 30000;
+
+    int eligible = age_condition && income_condition;
+    int at_least_one = age_condition || income_condition;
+
+    printf("Eligible for Premium Membership: %s\n",
+           eligible ? "True" : "False");
+
+    printf("Meets At Least One Condition: %s\n",
+           at_least_one ? "True" : "False");
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = sc.nextInt();
+
+        System.out.print("Enter monthly income: ");
+        double income = sc.nextDouble();
+
+        boolean ageCondition = age >= 18;
+        boolean incomeCondition = income >= 30000;
+
+        boolean eligible = ageCondition && incomeCondition;
+        boolean atLeastOne = ageCondition || incomeCondition;
+
+        System.out.println("Eligible for Premium Membership: " + eligible);
+        System.out.println("Meets At Least One Condition: " + atLeastOne);
+
+        sc.close();
+    }
+}
+
+
+
+Q43. Check Whether a Number Lies Within a Range
+Difficulty: Medium
+
+Question (English):
+
+Write a program to input an integer and check whether it lies within the inclusive range of 50 to 100. Use comparison and logical operators.
+
+Sample Input:
+Enter a number: 75
+
+
+Expected Output:
+Number is within the range 50 to 100: True
+
+
+Formula / Logic:
+
+A number belongs to the range if:
+\[
+num \geq 50 \ AND \ num \leq 100
+\]
+
+Python allows chained comparisons:
+50 <= num <= 100
+
+
+
+C and Java use two separate comparisons joined with logical AND.
+1. Python Code
+num = int(input("Enter a number: "))within_range = 50 <= num <= 100print("Number is within the range 50 to 100:", within_range)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    int within_range = (num >= 50 && num <= 100);
+
+    printf("Number is within the range 50 to 100: %s\n",
+           within_range ? "True" : "False");
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        boolean withinRange = num >= 50 && num <= 100;
+
+        System.out.println(
+            "Number is within the range 50 to 100: " + withinRange
+        );
+
+        sc.close();
+    }
+}
+
+
+
+Q44. Bitwise Operators for Setting and Clearing Bits
+Difficulty: Hard
+
+Question (English):
+
+Write a program to input an integer and a bit position. Perform the following operations:
+1. Set the specified bit to 1.
+2. Clear the specified bit to 0.
+3. Toggle the specified bit.
+Display the original number and the results of all three operations.
+
+Assume bit positions start from 0 (rightmost bit).
+
+Sample Input:
+Enter a number: 10
+Enter bit position: 1
+
+
+Expected Output:
+Original Number: 10
+After Setting Bit: 10
+After Clearing Bit: 8
+After Toggling Bit: 8
+
+
+Formula / Logic:
+
+Original number:
+10 = 1010
+
+
+Bit position = 1
+
+Mask:
+1 << 1 = 0010
+
+
+1. Set Bit
+\[
+Set = num \ OR \ mask
+\]
+
+1010 | 0010 = 1010
+
+2. Clear Bit
+\[
+Clear = num \ AND \sim mask
+\]
+
+1010 & 1101 = 1000
+
+3. Toggle Bit
+\[
+Toggle = num \ XOR \ mask
+\]
+
+1010 ^ 0010 = 1000
+
+Hinglish: Set bit ko 1 banata hai, Clear bit ko 0 banata hai aur Toggle bit ki current value reverse karta hai.
+1. Python Code
+num = int(input("Enter a number: "))position = int(input("Enter bit position: "))mask = 1 << position# Set the selected bitset_result = num | mask# Clear the selected bitclear_result = num & ~mask# Toggle the selected bittoggle_result = num ^ maskprint("Original Number:", num)print("After Setting Bit:", set_result)print("After Clearing Bit:", clear_result)print("After Toggling Bit:", toggle_result)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    unsigned int num, position;
+
+    printf("Enter a number: ");
+    scanf("%u", &num);
+
+    printf("Enter bit position: ");
+    scanf("%u", &position);
+
+    if (position >= sizeof(unsigned int) * 8) {
+        printf("Invalid bit position.\n");
+        return 1;
+    }
+
+    unsigned int mask = 1U << position;
+
+    // Set the selected bit
+    unsigned int set_result = num | mask;
+
+    // Clear the selected bit
+    unsigned int clear_result = num & ~mask;
+
+    // Toggle the selected bit
+    unsigned int toggle_result = num ^ mask;
+
+    printf("Original Number: %u\n", num);
+    printf("After Setting Bit: %u\n", set_result);
+    printf("After Clearing Bit: %u\n", clear_result);
+    printf("After Toggling Bit: %u\n", toggle_result);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        System.out.print("Enter bit position: ");
+        int position = sc.nextInt();
+
+        if (position < 0 || position >= Integer.SIZE) {
+            System.out.println("Invalid bit position.");
+            sc.close();
+            return;
+        }
+
+        int mask = 1 << position;
+
+        // Set the selected bit
+        int setResult = num | mask;
+
+        // Clear the selected bit
+        int clearResult = num & ~mask;
+
+        // Toggle the selected bit
+        int toggleResult = num ^ mask;
+
+        System.out.println("Original Number: " + num);
+        System.out.println("After Setting Bit: " + setResult);
+        System.out.println("After Clearing Bit: " + clearResult);
+        System.out.println("After Toggling Bit: " + toggleResult);
+
+        sc.close();
+    }
+}
+
+
+
+Q45. Complex Operator Precedence Expression
+Difficulty: Hard
+
+Question (English):
+
+Write a program to input three integers and evaluate a complex arithmetic expression involving multiplication, division, modulus, addition, subtraction and parentheses.
+
+Display the final result.
+
+Sample Input:
+Enter first number: 20
+Enter second number: 6
+Enter third number: 4
+
+
+Expected Output:
+Final Result: 72
+
+
+Formula / Logic:
+
+Expression:
+\[
+Result = A + B \times C - (A \div B) + (A \% B) \times C
+\]
+
+Substitute the values:
+\[
+=20+6\times4-(20\div6)+(20\%6)\times4
+\]
+
+\[
+=20+24-3+2\times4
+\]
+
+\[
+=20+24-3+8
+\]
+
+\[
+\boxed{Result=49}
+\]
+
+Correction: The correct expected output is 49, not 72.
+1. Python Code
+a = int(input("Enter first number: "))b = int(input("Enter second number: "))c = int(input("Enter third number: "))result = a + b * c - (a // b) + (a % b) * cprint("Final Result:", result)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+
+    printf("Enter first number: ");
+    scanf("%d", &a);
+
+    printf("Enter second number: ");
+    scanf("%d", &b);
+
+    printf("Enter third number: ");
+    scanf("%d", &c);
+
+    int result = a + b * c - (a / b) + (a % b) * c;
+
+    printf("Final Result: %d\n", result);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        System.out.print("Enter third number: ");
+        int c = sc.nextInt();
+
+        int result = a + b * c - (a / b) + (a % b) * c;
+
+        System.out.println("Final Result: " + result);
+
+        sc.close();
+    }
+}
+
