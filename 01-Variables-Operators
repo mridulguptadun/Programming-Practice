@@ -3422,3 +3422,568 @@ public class Main {
     }
 }
 
+Q46. Logical Short-Circuit Evaluation
+Difficulty: Medium
+
+Question (English):
+
+Write a program to input two integers and demonstrate short-circuit evaluation using logical AND and OR operators.
+
+Check the following conditions:
+1. Whether the first number is non-zero and the second number is divisible by the first number.
+2. Whether the first number is zero or the second number is greater than 100.
+Display the results without performing an invalid division operation.
+
+Sample Input:
+Enter first number: 0
+Enter second number: 150
+
+
+Expected Output:
+First Condition Result: False
+Second Condition Result: True
+
+
+Formula / Logic:
+- Logical AND (and, &&): If the first condition is false, the second condition is not evaluated.
+- Logical OR (or, ||): If the first condition is true, the second condition is not evaluated.
+Hinglish: Short-circuit ka matlab hai ki agar result pehle operand se hi decide ho jaye, toh second condition execute nahi hoti.
+1. Python Code
+num1 = int(input("Enter first number: "))num2 = int(input("Enter second number: "))# Second condition is evaluated only if num1 is non-zerofirst_result = (num1 != 0) and (num2 % num1 == 0)# Second condition is evaluated only if num1 is not zerosecond_result = (num1 == 0) or (num2 > 100)print("First Condition Result:", first_result)print("Second Condition Result:", second_result)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+
+    // Short-circuit prevents division by zero
+    int first_result = (num1 != 0) && (num2 % num1 == 0);
+
+    int second_result = (num1 == 0) || (num2 > 100);
+
+    printf("First Condition Result: %s\n",
+           first_result ? "True" : "False");
+
+    printf("Second Condition Result: %s\n",
+           second_result ? "True" : "False");
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        // Short-circuit prevents division by zero
+        boolean firstResult =
+                (num1 != 0) && (num2 % num1 == 0);
+
+        boolean secondResult =
+                (num1 == 0) || (num2 > 100);
+
+        System.out.println("First Condition Result: " + firstResult);
+        System.out.println("Second Condition Result: " + secondResult);
+
+        sc.close();
+    }
+}
+
+
+
+Q47. Compound Comparison and Logical Expressions
+Difficulty: Medium
+
+Question (English):
+
+Write a program to input a student's age, examination marks and attendance percentage. Determine whether the student is eligible for a scholarship using the following conditions:
+1. Age must be between 18 and 25 years (inclusive).
+2. Examination marks must be at least 80.
+3. Attendance must be at least 75%.
+4. All three conditions must be satisfied.
+Also display whether the student satisfies the age and marks conditions together.
+
+Sample Input:
+Enter age: 21
+Enter examination marks: 85
+Enter attendance percentage: 80
+
+
+Expected Output:
+Scholarship Eligible: True
+Age and Marks Conditions Satisfied: True
+
+
+Formula / Logic:
+\[
+Scholarship =
+(18 \leq Age \leq 25)
+\ AND\ (Marks \geq 80)
+\ AND\ (Attendance \geq 75)
+\]
+
+1. Python Code
+age = int(input("Enter age: "))marks = float(input("Enter examination marks: "))attendance = float(input("Enter attendance percentage: "))age_condition = 18 <= age <= 25marks_condition = marks >= 80attendance_condition = attendance >= 75eligible = (    age_condition    and marks_condition    and attendance_condition)age_marks = age_condition and marks_conditionprint("Scholarship Eligible:", eligible)print("Age and Marks Conditions Satisfied:", age_marks)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int age;
+    float marks, attendance;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Enter examination marks: ");
+    scanf("%f", &marks);
+
+    printf("Enter attendance percentage: ");
+    scanf("%f", &attendance);
+
+    int age_condition = age >= 18 && age <= 25;
+    int marks_condition = marks >= 80;
+    int attendance_condition = attendance >= 75;
+
+    int eligible = age_condition &&
+                   marks_condition &&
+                   attendance_condition;
+
+    int age_marks = age_condition && marks_condition;
+
+    printf("Scholarship Eligible: %s\n",
+           eligible ? "True" : "False");
+
+    printf("Age and Marks Conditions Satisfied: %s\n",
+           age_marks ? "True" : "False");
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = sc.nextInt();
+
+        System.out.print("Enter examination marks: ");
+        double marks = sc.nextDouble();
+
+        System.out.print("Enter attendance percentage: ");
+        double attendance = sc.nextDouble();
+
+        boolean ageCondition = age >= 18 && age <= 25;
+        boolean marksCondition = marks >= 80;
+        boolean attendanceCondition = attendance >= 75;
+
+        boolean eligible = ageCondition &&
+                           marksCondition &&
+                           attendanceCondition;
+
+        boolean ageMarks = ageCondition && marksCondition;
+
+        System.out.println("Scholarship Eligible: " + eligible);
+        System.out.println("Age and Marks Conditions Satisfied: " + ageMarks);
+
+        sc.close();
+    }
+}
+
+
+
+Q48. XOR-Based Number Manipulation
+Difficulty: Hard
+
+Question (English):
+
+Write a program to input two integers and swap their values without using a third variable. Use the bitwise XOR (^) operator.
+
+Display the values before and after swapping.
+
+Sample Input:
+Enter first number: 25
+Enter second number: 40
+
+
+Expected Output:
+Before Swapping:
+First Number: 25
+Second Number: 40
+
+After Swapping:
+First Number: 40
+Second Number: 25
+
+
+Formula / Logic:
+
+XOR swapping uses three operations:
+a = a ^ b
+b = a ^ b
+a = a ^ b
+
+
+Example:
+a = 25
+b = 40
+
+After first operation:
+a = 25 ^ 40
+
+After second operation:
+b = 25 ^ 40 ^ 40 = 25
+
+After third operation:
+a = 25 ^ 40 ^ 25 = 40
+
+
+1. Python Code
+a = int(input("Enter first number: "))b = int(input("Enter second number: "))print("Before Swapping:")print("First Number:", a)print("Second Number:", b)# Swap using XORa = a ^ bb = a ^ ba = a ^ bprint("\nAfter Swapping:")print("First Number:", a)print("Second Number:", b)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter first number: ");
+    scanf("%d", &a);
+
+    printf("Enter second number: ");
+    scanf("%d", &b);
+
+    printf("Before Swapping:\n");
+    printf("First Number: %d\n", a);
+    printf("Second Number: %d\n", b);
+
+    // Swap using XOR
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+
+    printf("\nAfter Swapping:\n");
+    printf("First Number: %d\n", a);
+    printf("Second Number: %d\n", b);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        System.out.println("Before Swapping:");
+        System.out.println("First Number: " + a);
+        System.out.println("Second Number: " + b);
+
+        // Swap using XOR
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+
+        System.out.println("\nAfter Swapping:");
+        System.out.println("First Number: " + a);
+        System.out.println("Second Number: " + b);
+
+        sc.close();
+    }
+}
+
+
+
+Q49. Extracting and Combining Bits
+Difficulty: Hard
+
+Question (English):
+
+Write a program to input an integer and extract its lower four bits. Then combine these extracted bits with another four-bit integer using bitwise OR.
+
+Display the original number, extracted bits and final combined result.
+
+Assume both inputs are non-negative integers between 0 and 255.
+
+Sample Input:
+Enter first number: 45
+Enter second number: 10
+
+
+Expected Output:
+Original Number: 45
+Extracted Lower 4 Bits: 13
+Combined Result: 45
+
+
+Formula / Logic:
+
+First number:
+45 = 00101101
+
+
+Mask:
+15 = 00001111
+
+
+Extract lower four bits:
+\[
+Extracted = A\ \&\ 15
+\]
+
+\[
+45\ \&\ 15 = 13
+\]
+
+Second number:
+10 = 00001010
+
+
+Combine:
+\[
+Combined = Extracted\ |\ B
+\]
+
+\[
+13\ |\ 10 = 15
+\]
+
+Correction: The correct combined result is 15, not 45.
+1. Python Code
+a = int(input("Enter first number: "))b = int(input("Enter second number: "))# Extract lower four bitsextracted = a & 15# Combine extracted bits with second numbercombined = extracted | bprint("Original Number:", a)print("Extracted Lower 4 Bits:", extracted)print("Combined Result:", combined)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    unsigned int a, b;
+
+    printf("Enter first number: ");
+    scanf("%u", &a);
+
+    printf("Enter second number: ");
+    scanf("%u", &b);
+
+    if (a > 255 || b > 15) {
+        printf("Invalid input. Enter A between 0-255 and B between 0-15.\n");
+        return 1;
+    }
+
+    // Extract lower four bits
+    unsigned int extracted = a & 15;
+
+    // Combine extracted bits with second number
+    unsigned int combined = extracted | b;
+
+    printf("Original Number: %u\n", a);
+    printf("Extracted Lower 4 Bits: %u\n", extracted);
+    printf("Combined Result: %u\n", combined);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a < 0 || a > 255 || b < 0 || b > 15) {
+            System.out.println(
+                "Invalid input. Enter A between 0-255 and B between 0-15."
+            );
+            sc.close();
+            return;
+        }
+
+        // Extract lower four bits
+        int extracted = a & 15;
+
+        // Combine extracted bits with second number
+        int combined = extracted | b;
+
+        System.out.println("Original Number: " + a);
+        System.out.println("Extracted Lower 4 Bits: " + extracted);
+        System.out.println("Combined Result: " + combined);
+
+        sc.close();
+    }
+}
+
+
+
+Q50. Complete Operator-Based Calculator
+Difficulty: Hard
+
+Question (English):
+
+Write a program to input two integers and perform the following operations:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Integer Division
+5. Modulus
+6. Greater Than Comparison
+7. Equality Comparison
+8. Bitwise AND
+9. Bitwise OR
+10. Bitwise XOR
+Display the results of all operations.
+
+Sample Input:
+Enter first number: 25
+Enter second number: 10
+
+
+Expected Output:
+Addition: 35
+Subtraction: 15
+Multiplication: 250
+Integer Division: 2
+Modulus: 5
+Greater Than: True
+Equality: False
+Bitwise AND: 8
+Bitwise OR: 27
+Bitwise XOR: 19
+
+
+Formula / Logic:
+Operation	Formula
+Addition	A + B
+Subtraction	A - B
+Multiplication	A * B
+Integer Division	A / B
+Modulus	A % B
+Greater Than	A > B
+Equality	A == B
+Bitwise AND	A & B
+Bitwise OR	A | B
+Bitwise XOR	A ^ B
+
+Binary representation:
+25 = 11001
+10 = 01010
+
+AND = 01000 = 8
+OR  = 11011 = 27
+XOR = 10011 = 19
+
+
+1. Python Code
+a = int(input("Enter first number: "))b = int(input("Enter second number: "))if b == 0:    print("Division and modulus are not possible with zero.")else:    print("Addition:", a + b)    print("Subtraction:", a - b)    print("Multiplication:", a * b)    print("Integer Division:", a // b)    print("Modulus:", a % b)    print("Greater Than:", a > b)    print("Equality:", a == b)    print("Bitwise AND:", a & b)    print("Bitwise OR:", a | b)    print("Bitwise XOR:", a ^ b)
+
+
+
+2. C Code
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter first number: ");
+    scanf("%d", &a);
+
+    printf("Enter second number: ");
+    scanf("%d", &b);
+
+    if (b == 0) {
+        printf("Division and modulus are not possible with zero.\n");
+    } else {
+        printf("Addition: %d\n", a + b);
+        printf("Subtraction: %d\n", a - b);
+        printf("Multiplication: %d\n", a * b);
+        printf("Integer Division: %d\n", a / b);
+        printf("Modulus: %d\n", a % b);
+    }
+
+    printf("Greater Than: %s\n", a > b ? "True" : "False");
+    printf("Equality: %s\n", a == b ? "True" : "False");
+
+    printf("Bitwise AND: %d\n", a & b);
+    printf("Bitwise OR: %d\n", a | b);
+    printf("Bitwise XOR: %d\n", a ^ b);
+
+    return 0;
+}
+
+
+3. Java Code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (b == 0) {
+            System.out.println(
+                "Division and modulus are not possible with zero."
+            );
+        } else {
+            System.out.println("Addition: " + (a + b));
+            System.out.println("Subtraction: " + (a - b));
+            System.out.println("Multiplication: " + (a * b));
+            System.out.println("Integer Division: " + (a / b));
+            System.out.println("Modulus: " + (a % b));
+        }
+
+        System.out.println("Greater Than: " + (a > b));
+        System.out.println("Equality: " + (a == b));
+
+        System.out.println("Bitwise AND: " + (a & b));
+        System.out.println("Bitwise OR: " + (a | b));
+        System.out.println("Bitwise XOR: " + (a ^ b));
+
+        sc.close();
+    }
+}
