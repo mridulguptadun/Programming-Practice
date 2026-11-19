@@ -1,25 +1,7 @@
-Q1. Store and Display Personal Information
-Question:
-Write a program to store a person's name, age, height, and city in variables and display all the information.
-
-Sample Input:
-Name: Rahul
-Age: 22
-Height: 5.8
-City: Meerut
-
-
-Expected Output:
-Name: Rahul
-Age: 22
-Height: 5.8
-City: Meerut
-
+Q1. Write a program to store a person's name, age, height, and city in variables and display all the information.
 
 Python Code:
 name = "Rahul"age = 22height = 5.8city = "Meerut"print("Name:", name)print("Age:", age)print("Height:", height)print("City:", city)
-
-
 
 C Code:
 #include <stdio.h>
@@ -38,7 +20,6 @@ int main() {
     return 0;
 }
 
-
 Java Code:
 public class Main {
     public static void main(String[] args) {
@@ -46,7 +27,6 @@ public class Main {
         int age = 22;
         float height = 5.8f;
         String city = "Meerut";
-
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
         System.out.println("Height: " + height);
@@ -54,29 +34,12 @@ public class Main {
     }
 }
 
+=================================================
 
-
-Q2. Perform Basic Arithmetic Operations
-Question:
-Write a program to store two numbers in variables and perform addition, subtraction, multiplication, division, and modulus operations.
-
-Sample Input:
-First Number: 20
-Second Number: 6
-
-
-Expected Output:
-Addition: 26
-Subtraction: 14
-Multiplication: 120
-Division: 3.333333
-Modulus: 2
-
+Q2. Write a program to store two numbers in variables and perform addition, subtraction, multiplication, division, and modulus operations.
 
 Python Code:
 a = 20b = 6print("Addition:", a + b)print("Subtraction:", a - b)print("Multiplication:", a * b)print("Division:", a / b)print("Modulus:", a % b)
-
-
 
 C Code:
 #include <stdio.h>
@@ -84,23 +47,19 @@ C Code:
 int main() {
     int a = 20;
     int b = 6;
-
     printf("Addition: %d\n", a + b);
     printf("Subtraction: %d\n", a - b);
     printf("Multiplication: %d\n", a * b);
     printf("Division: %.6f\n", (float)a / b);
     printf("Modulus: %d\n", a % b);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int a = 20;
         int b = 6;
-
         System.out.println("Addition: " + (a + b));
         System.out.println("Subtraction: " + (a - b));
         System.out.println("Multiplication: " + (a * b));
@@ -109,35 +68,12 @@ public class Main {
     }
 }
 
+==========================================
 
+Q3. Write a program to swap the values of two variables using a temporary variable.
 
-Q3. Swap Two Variables Using a Third Variable
-Question:
-Write a program to swap the values of two variables using a temporary variable.
-
-Sample Input:
-A = 10
-B = 20
-
-
-Expected Output:
-Before Swapping:
-A = 10
-B = 20
-
-After Swapping:
-A = 20
-B = 10
-
-
-Logic:
-1. Store the value of A in a temporary variable.
-2. Assign B to A.
-3. Assign the temporary variable to B.
 Python Code:
 a = 10b = 20print("Before Swapping:")print("A =", a)print("B =", b)temp = aa = bb = tempprint("\nAfter Swapping:")print("A =", a)print("B =", b)
-
-
 
 C Code:
 #include <stdio.h>
@@ -146,22 +82,17 @@ int main() {
     int a = 10;
     int b = 20;
     int temp;
-
     printf("Before Swapping:\n");
     printf("A = %d\n", a);
     printf("B = %d\n", b);
-
     temp = a;
     a = b;
     b = temp;
-
     printf("\nAfter Swapping:\n");
     printf("A = %d\n", a);
     printf("B = %d\n", b);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
@@ -169,36 +100,21 @@ public class Main {
         int a = 10;
         int b = 20;
         int temp;
-
         System.out.println("Before Swapping:");
         System.out.println("A = " + a);
         System.out.println("B = " + b);
-
         temp = a;
         a = b;
         b = temp;
-
         System.out.println("\nAfter Swapping:");
         System.out.println("A = " + a);
         System.out.println("B = " + b);
     }
 }
 
+========================================
 
-
-Q4. Calculate the Area and Perimeter of a Rectangle
-Question:
-Write a program to calculate the area and perimeter of a rectangle using its length and width.
-
-Sample Input:
-Length = 15
-Width = 8
-
-
-Expected Output:
-Area = 120
-Perimeter = 46
-
+Q4. Write a program to calculate the area and perimeter of a rectangle using its length and width.
 
 Formula:
 - Area = Length × Width
@@ -206,83 +122,55 @@ Formula:
 Python Code:
 length = 15width = 8area = length * widthperimeter = 2 * (length + width)print("Area =", area)print("Perimeter =", perimeter)
 
-
-
 C Code:
 #include <stdio.h>
 
 int main() {
     int length = 15;
     int width = 8;
-
     int area = length * width;
     int perimeter = 2 * (length + width);
-
     printf("Area = %d\n", area);
     printf("Perimeter = %d\n", perimeter);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int length = 15;
         int width = 8;
-
         int area = length * width;
         int perimeter = 2 * (length + width);
-
         System.out.println("Area = " + area);
         System.out.println("Perimeter = " + perimeter);
     }
 }
 
+======================================================
 
-
-Q5. Calculate Simple Interest
-Question:
-Write a program to calculate simple interest and the total amount using the principal amount, annual interest rate, and time period.
-
-Sample Input:
-Principal = 50000
-Rate = 8
-Time = 3
-
-
-Expected Output:
-Simple Interest = 12000
-Total Amount = 62000
-
+Q5.Write a program to calculate simple interest and the total amount using the principal amount, annual interest rate, and time period.
 
 Formula:
 - Simple Interest = (Principal × Rate × Time) / 100
 - Total Amount = Principal + Simple Interest
+
 Python Code:
 principal = 50000rate = 8time = 3simple_interest = (principal * rate * time) / 100total_amount = principal + simple_interestprint("Simple Interest =", simple_interest)print("Total Amount =", total_amount)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     float principal = 50000;
     float rate = 8;
     float time = 3;
-
     float simple_interest =
         (principal * rate * time) / 100;
-
     float total_amount = principal + simple_interest;
-
     printf("Simple Interest = %.0f\n", simple_interest);
     printf("Total Amount = %.0f\n", total_amount);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
@@ -290,57 +178,37 @@ public class Main {
         double principal = 50000;
         double rate = 8;
         double time = 3;
-
         double simpleInterest =
             (principal * rate * time) / 100;
-
         double totalAmount = principal + simpleInterest;
-
         System.out.println("Simple Interest = " + simpleInterest);
         System.out.println("Total Amount = " + totalAmount);
     }
 }
 
-Q6. Calculate the Average of Three Numbers
-Question:
-Write a program to store three numbers in variables and calculate their average.
+===================================================
 
-Sample Input:
-First Number = 10
-Second Number = 20
-Third Number = 30
-
-
-Expected Output:
-Sum = 60
-Average = 20
-
+Q6. Write a program to store three numbers in variables and calculate their average.
 
 Formula:
 - Sum = A + B + C
 - Average = Sum / 3
+
 Python Code:
 a = 10b = 20c = 30total = a + b + caverage = total / 3print("Sum =", total)print("Average =", average)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int a = 10;
     int b = 20;
     int c = 30;
-
     int total = a + b + c;
     float average = total / 3.0;
-
     printf("Sum = %d\n", total);
     printf("Average = %.2f\n", average);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
@@ -348,169 +216,104 @@ public class Main {
         int a = 10;
         int b = 20;
         int c = 30;
-
         int total = a + b + c;
         double average = total / 3.0;
-
         System.out.println("Sum = " + total);
         System.out.println("Average = " + average);
     }
 }
 
+=================================================
 
-
-Q7. Convert Temperature from Celsius to Fahrenheit
-Question:
-Write a program to convert a temperature from Celsius to Fahrenheit.
-
-Sample Input:
-Celsius = 37
-
-
-Expected Output:
-Fahrenheit = 98.60
-
+Q7.Write a program to convert a temperature from Celsius to Fahrenheit.
 
 Formula:
-\[
 F = (C \times 9/5) + 32
-\]
 
 Python Code:
 celsius = 37fahrenheit = (celsius * 9 / 5) + 32print("Fahrenheit =", round(fahrenheit, 2))
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     float celsius = 37;
-
     float fahrenheit = (celsius * 9 / 5) + 32;
-
     printf("Fahrenheit = %.2f\n", fahrenheit);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         double celsius = 37;
-
         double fahrenheit = (celsius * 9 / 5) + 32;
-
         System.out.printf("Fahrenheit = %.2f%n", fahrenheit);
     }
 }
 
+==================================================================
 
-
-Q8. Calculate the Area and Circumference of a Circle
-Question:
-Write a program to calculate the area and circumference of a circle using its radius.
-
-Sample Input:
-Radius = 7
-
-
-Expected Output:
-Area = 153.94
-Circumference = 43.98
-
+Q8. Write a program to calculate the area and circumference of a circle using its radius.
 
 Formula:
 - Area = π × Radius × Radius
 - Circumference = 2 × π × Radius
+
 Python Code:
 import mathradius = 7area = math.pi * radius ** 2circumference = 2 * math.pi * radiusprint("Area =", round(area, 2))print("Circumference =", round(circumference, 2))
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     const float PI = 3.14159265;
     float radius = 7;
-
     float area = PI * radius * radius;
     float circumference = 2 * PI * radius;
-
     printf("Area = %.2f\n", area);
     printf("Circumference = %.2f\n", circumference);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         final double PI = Math.PI;
         double radius = 7;
-
         double area = PI * radius * radius;
         double circumference = 2 * PI * radius;
-
         System.out.printf("Area = %.2f%n", area);
         System.out.printf("Circumference = %.2f%n", circumference);
     }
 }
 
+====================================================
 
-
-Q9. Calculate Total Marks and Percentage
-Question:
-Write a program to calculate the total marks, average marks, and percentage of a student in five subjects. Each subject carries a maximum of 100 marks.
-
-Sample Input:
-English = 85
-Mathematics = 90
-Science = 78
-Computer = 95
-Hindi = 82
-
-
-Expected Output:
-Total Marks = 430
-Average Marks = 86.00
-Percentage = 86.00%
-
+Q9. Write a program to calculate the total marks, average marks, and percentage of a student in five subjects. Each subject carries a maximum of 100 marks.
 
 Formula:
 - Total = Sum of all subject marks
 - Average = Total / Number of Subjects
 - Percentage = (Total / Maximum Marks) × 100
+
 Python Code:
 english = 85mathematics = 90science = 78computer = 95hindi = 82total = english + mathematics + science + computer + hindiaverage = total / 5percentage = (total / 500) * 100print("Total Marks =", total)print("Average Marks =", round(average, 2))print("Percentage =", round(percentage, 2), "%")
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int english = 85;
     int mathematics = 90;
     int science = 78;
     int computer = 95;
     int hindi = 82;
-
     int total = english + mathematics + science + computer + hindi;
-
     float average = total / 5.0;
     float percentage = (total / 500.0) * 100;
-
     printf("Total Marks = %d\n", total);
     printf("Average Marks = %.2f\n", average);
     printf("Percentage = %.2f%%\n", percentage);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
@@ -520,76 +323,48 @@ public class Main {
         int science = 78;
         int computer = 95;
         int hindi = 82;
-
         int total = english + mathematics + science + computer + hindi;
-
         double average = total / 5.0;
         double percentage = (total / 500.0) * 100;
-
         System.out.println("Total Marks = " + total);
         System.out.printf("Average Marks = %.2f%n", average);
         System.out.printf("Percentage = %.2f%%%n", percentage);
     }
 }
 
+========================================================
 
-
-Q10. Calculate the Total Salary of an Employee
-Question:
-Write a program to calculate the gross salary of an employee using basic salary, house rent allowance (HRA), and dearness allowance (DA).
-
-HRA is 20% of the basic salary, and DA is 10% of the basic salary.
-
-Sample Input:
-Basic Salary = 30000
-
-
-Expected Output:
-Basic Salary = 30000.00
-HRA = 6000.00
-DA = 3000.00
-Gross Salary = 39000.00
-
+Q10.Write a program to calculate the gross salary of an employee using basic salary, house rent allowance (HRA), and dearness allowance (DA).
 
 Formula:
 - HRA = Basic Salary × 20 / 100
 - DA = Basic Salary × 10 / 100
 - Gross Salary = Basic Salary + HRA + DA
+
 Python Code:
 basic_salary = 30000hra = basic_salary * 20 / 100da = basic_salary * 10 / 100gross_salary = basic_salary + hra + daprint("Basic Salary =", basic_salary)print("HRA =", hra)print("DA =", da)print("Gross Salary =", gross_salary)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     float basic_salary = 30000;
-
     float hra = basic_salary * 20 / 100;
     float da = basic_salary * 10 / 100;
-
     float gross_salary = basic_salary + hra + da;
-
     printf("Basic Salary = %.2f\n", basic_salary);
     printf("HRA = %.2f\n", hra);
     printf("DA = %.2f\n", da);
     printf("Gross Salary = %.2f\n", gross_salary);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         double basicSalary = 30000;
-
         double hra = basicSalary * 20 / 100;
         double da = basicSalary * 10 / 100;
-
         double grossSalary = basicSalary + hra + da;
-
         System.out.printf("Basic Salary = %.2f%n", basicSalary);
         System.out.printf("HRA = %.2f%n", hra);
         System.out.printf("DA = %.2f%n", da);
@@ -597,294 +372,179 @@ public class Main {
     }
 }
 
-Q11. Convert an Integer into Float and String
-Question:
-Write a program to convert an integer value into a floating-point number and a string. Display the original and converted values along with their data types.
+==============================================================
 
-Sample Input:
-Number = 25
-
-
-Expected Output:
-Original Value = 25
-Float Value = 25.0
-String Value = 25
-
-Original Type = Integer
-Float Type = Float
-String Type = String
-
+Q11. Write a program to convert an integer value into a floating-point number and a string. Display the original and converted values along with their data types.
 
 Logic:
 - Convert integer into float.
 - Convert integer into string.
 - Display the values and their data types.
+
 Python Code:
 number = 25float_value = float(number)string_value = str(number)print("Original Value =", number)print("Float Value =", float_value)print("String Value =", string_value)print("\nOriginal Type =", type(number).__name__)print("Float Type =", type(float_value).__name__)print("String Type =", type(string_value).__name__)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int number = 25;
-
     float float_value = (float)number;
-
     char string_value[20];
     sprintf(string_value, "%d", number);
-
     printf("Original Value = %d\n", number);
     printf("Float Value = %.1f\n", float_value);
     printf("String Value = %s\n", string_value);
-
     printf("\nOriginal Type = Integer\n");
     printf("Float Type = Float\n");
     printf("String Type = String\n");
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int number = 25;
-
         float floatValue = (float) number;
         String stringValue = String.valueOf(number);
-
         System.out.println("Original Value = " + number);
         System.out.println("Float Value = " + floatValue);
         System.out.println("String Value = " + stringValue);
-
         System.out.println("\nOriginal Type = Integer");
         System.out.println("Float Type = Float");
         System.out.println("String Type = String");
     }
 }
 
+=================================================================
 
-
-Q12. Convert a Float into Integer and Integer into Character
-Question:
-Write a program to convert a floating-point number into an integer and convert an integer ASCII value into its corresponding character.
-
-Sample Input:
-Float Number = 45.89
-ASCII Value = 65
-
-
-Expected Output:
-Original Float = 45.89
-Converted Integer = 45
-
-ASCII Value = 65
-Corresponding Character = A
-
+Q12. Write a program to convert a floating-point number into an integer and convert an integer ASCII value into its corresponding character.
 
 Logic:
 - Convert the floating-point number into an integer by removing its fractional part.
 - Convert the ASCII value 65 into its corresponding character.
+
 Python Code:
 float_number = 45.89ascii_value = 65integer_value = int(float_number)character = chr(ascii_value)print("Original Float =", float_number)print("Converted Integer =", integer_value)print("\nASCII Value =", ascii_value)print("Corresponding Character =", character)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     float float_number = 45.89;
     int ascii_value = 65;
-
     int integer_value = (int)float_number;
     char character = (char)ascii_value;
-
     printf("Original Float = %.2f\n", float_number);
     printf("Converted Integer = %d\n", integer_value);
-
     printf("\nASCII Value = %d\n", ascii_value);
     printf("Corresponding Character = %c\n", character);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         double floatNumber = 45.89;
         int asciiValue = 65;
-
         int integerValue = (int) floatNumber;
         char character = (char) asciiValue;
-
         System.out.println("Original Float = " + floatNumber);
         System.out.println("Converted Integer = " + integerValue);
-
         System.out.println("\nASCII Value = " + asciiValue);
         System.out.println("Corresponding Character = " + character);
     }
 }
 
+======================================================================
 
-
-Q13. Calculate the ASCII Value of a Character
-Question:
-Write a program to store a character in a variable and display its ASCII value.
-
-Sample Input:
-Character = A
-
-
-Expected Output:
-Character = A
-ASCII Value = 65
-
+Q13.Write a program to store a character in a variable and display its ASCII value.
 
 Logic:
-
 Every character has a numeric ASCII value. Convert the character into its corresponding integer value.
 
 Python Code:
 character = 'A'ascii_value = ord(character)print("Character =", character)print("ASCII Value =", ascii_value)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     char character = 'A';
-
     int ascii_value = (int)character;
-
     printf("Character = %c\n", character);
     printf("ASCII Value = %d\n", ascii_value);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         char character = 'A';
-
         int asciiValue = (int) character;
-
         System.out.println("Character = " + character);
         System.out.println("ASCII Value = " + asciiValue);
     }
 }
 
+===============================================================
 
+Q14. Write a program to convert an ASCII integer value into its corresponding character and display both.
 
-Q14. Find a Character Using Its ASCII Value
-Question:
-Write a program to convert an ASCII integer value into its corresponding character and display both.
-
-Sample Input:
-ASCII Value = 97
-
-
-Expected Output:
-ASCII Value = 97
-Character = a
-
-
-Logic:
-
-Convert the integer ASCII value into a character using the appropriate type conversion.
+Logic: Convert the integer ASCII value into a character using the appropriate type conversion.
 
 Python Code:
 ascii_value = 97character = chr(ascii_value)print("ASCII Value =", ascii_value)print("Character =", character)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int ascii_value = 97;
-
     char character = (char)ascii_value;
-
     printf("ASCII Value = %d\n", ascii_value);
     printf("Character = %c\n", character);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int asciiValue = 97;
-
         char character = (char) asciiValue;
-
         System.out.println("ASCII Value = " + asciiValue);
         System.out.println("Character = " + character);
     }
 }
 
+==========================================================
 
-
-Q15. Calculate Quotient and Remainder
-Question:
-Write a program to divide two integers and calculate their quotient and remainder. Display the original numbers, quotient, and remainder.
-
-Sample Input:
-Dividend = 47
-Divisor = 5
-
-
-Expected Output:
-Dividend = 47
-Divisor = 5
-Quotient = 9
-Remainder = 2
-
+Q15. Write a program to divide two integers and calculate their quotient and remainder. Display the original numbers, quotient, and remainder.
 
 Formula:
 - Quotient = Dividend / Divisor (integer division)
 - Remainder = Dividend % Divisor
+
 Python Code:
 dividend = 47divisor = 5quotient = dividend // divisorremainder = dividend % divisorprint("Dividend =", dividend)print("Divisor =", divisor)print("Quotient =", quotient)print("Remainder =", remainder)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int dividend = 47;
     int divisor = 5;
-
     int quotient = dividend / divisor;
     int remainder = dividend % divisor;
-
     printf("Dividend = %d\n", dividend);
     printf("Divisor = %d\n", divisor);
     printf("Quotient = %d\n", quotient);
     printf("Remainder = %d\n", remainder);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int dividend = 47;
         int divisor = 5;
-
         int quotient = dividend / divisor;
         int remainder = dividend % divisor;
-
         System.out.println("Dividend = " + dividend);
         System.out.println("Divisor = " + divisor);
         System.out.println("Quotient = " + quotient);
@@ -892,181 +552,104 @@ public class Main {
     }
 }
 
+=========================================================
 
-Q16. Calculate the Square and Cube of a Number
-Question:
-Write a program to calculate the square and cube of a given number using arithmetic operators.
-
-Sample Input:
-Number = 5
-
-
-Expected Output:
-Number = 5
-Square = 25
-Cube = 125
-
+Q16. Write a program to calculate the square and cube of a given number using arithmetic operators.
 
 Formula:
 - Square = Number × Number
 - Cube = Number × Number × Number
+
 Python Code:
 number = 5square = number ** 2cube = number ** 3print("Number =", number)print("Square =", square)print("Cube =", cube)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int number = 5;
-
     int square = number * number;
     int cube = number * number * number;
-
     printf("Number = %d\n", number);
     printf("Square = %d\n", square);
     printf("Cube = %d\n", cube);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int number = 5;
-
         int square = number * number;
         int cube = number * number * number;
-
         System.out.println("Number = " + number);
         System.out.println("Square = " + square);
         System.out.println("Cube = " + cube);
     }
 }
 
+==============================================================
 
-
-Q17. Calculate the Power of a Number
-Question:
-Write a program to calculate the power of a number using a base and an exponent.
-
-Sample Input:
-Base = 3
-Exponent = 4
-
-
-Expected Output:
-Base = 3
-Exponent = 4
-Result = 81
-
+Q17. Write a program to calculate the power of a number using a base and an exponent.
 
 Formula:
-\[
 Result = Base^{Exponent}
-\]
 
 Python Code:
 base = 3exponent = 4result = base ** exponentprint("Base =", base)print("Exponent =", exponent)print("Result =", result)
 
-
-
 C Code:
 #include <stdio.h>
 #include <math.h>
-
 int main() {
     int base = 3;
     int exponent = 4;
-
     double result = pow(base, exponent);
-
     printf("Base = %d\n", base);
     printf("Exponent = %d\n", exponent);
     printf("Result = %.0f\n", result);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int base = 3;
         int exponent = 4;
-
         double result = Math.pow(base, exponent);
-
         System.out.println("Base = " + base);
         System.out.println("Exponent = " + exponent);
         System.out.printf("Result = %.0f%n", result);
     }
 }
 
+=========================================================
 
+Q18. Write a program to swap the values of three variables in a circular order. The value of the first variable should move to the second, the second to the third, and the third to the first.
 
-Q18. Swap Three Variables in a Circular Order
-Question:
-Write a program to swap the values of three variables in a circular order. The value of the first variable should move to the second, the second to the third, and the third to the first.
-
-Sample Input:
-A = 10
-B = 20
-C = 30
-
-
-Expected Output:
-Before Swapping:
-A = 10
-B = 20
-C = 30
-
-After Swapping:
-A = 30
-B = 10
-C = 20
-
-
-Logic:
-1. Store the original value of A in a temporary variable.
-2. Assign C to A.
-3. Assign the original value of A to B.
-4. Assign the original value of B to C.
 Python Code:
 a = 10b = 20c = 30print("Before Swapping:")print("A =", a)print("B =", b)print("C =", c)temp = aa = cc = bb = tempprint("\nAfter Swapping:")print("A =", a)print("B =", b)print("C =", c)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int a = 10;
     int b = 20;
     int c = 30;
     int temp;
-
     printf("Before Swapping:\n");
     printf("A = %d\n", a);
     printf("B = %d\n", b);
     printf("C = %d\n", c);
-
     temp = a;
-
     a = c;
     c = b;
     b = temp;
-
     printf("\nAfter Swapping:\n");
     printf("A = %d\n", a);
     printf("B = %d\n", b);
     printf("C = %d\n", c);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
@@ -1075,18 +658,14 @@ public class Main {
         int b = 20;
         int c = 30;
         int temp;
-
         System.out.println("Before Swapping:");
         System.out.println("A = " + a);
         System.out.println("B = " + b);
         System.out.println("C = " + c);
-
         temp = a;
-
         a = c;
         c = b;
         b = temp;
-
         System.out.println("\nAfter Swapping:");
         System.out.println("A = " + a);
         System.out.println("B = " + b);
@@ -1094,131 +673,74 @@ public class Main {
     }
 }
 
+========================================================
 
-
-Q19. Demonstrate Constant Variables
-Question:
-Write a program to calculate the area of a circle using a constant variable for the value of PI. Display the radius, PI value, and calculated area.
-
-Sample Input:
-Radius = 7
-PI = 3.14159
-
-
-Expected Output:
-Radius = 7
-PI = 3.14159
-Area = 153.94
-
+Q19. Write a program to calculate the area of a circle using a constant variable for the value of PI. Display the radius, PI value, and calculated area.
 
 Formula:
-\[
 Area = PI \times Radius \times Radius
-\]
 
-Logic:
-
-A constant variable stores a value that cannot be reassigned after initialization.
-- Python: Use an uppercase variable name by convention.
-- C: Use the const keyword.
-- Java: Use the final keyword.
 Python Code:
 PI = 3.14159radius = 7area = PI * radius * radiusprint("Radius =", radius)print("PI =", PI)print("Area =", round(area, 2))
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     const float PI = 3.14159;
     float radius = 7;
-
     float area = PI * radius * radius;
-
     printf("Radius = %.0f\n", radius);
     printf("PI = %.5f\n", PI);
     printf("Area = %.2f\n", area);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         final double PI = 3.14159;
         double radius = 7;
-
         double area = PI * radius * radius;
-
         System.out.println("Radius = " + (int) radius);
         System.out.println("PI = " + PI);
         System.out.printf("Area = %.2f%n", area);
     }
 }
 
+============================================================
 
-
-Q20. Calculate Product Price After Tax and Discount
-Question:
-Write a program to calculate the final price of a product after applying a discount and adding tax.
-
-A customer purchases a product with an original price of ₹5,000. The shop offers a 10% discount on the original price. After applying the discount, an 18% tax is added to the discounted price. Calculate the discount amount, discounted price, tax amount, and final price.
-
-Sample Input:
-Original Price = 5000
-Discount Rate = 10%
-Tax Rate = 18%
-
-
-Expected Output:
-Original Price = 5000.00
-Discount Amount = 500.00
-Discounted Price = 4500.00
-Tax Amount = 810.00
-Final Price = 5310.00
-
+Q20. Write a program to calculate the final price of a product after applying a discount and adding tax.
 
 Formula:
 - Discount Amount = Original Price × Discount Rate / 100
 - Discounted Price = Original Price − Discount Amount
 - Tax Amount = Discounted Price × Tax Rate / 100
 - Final Price = Discounted Price + Tax Amount
+
 Python Code:
 original_price = 5000discount_rate = 10tax_rate = 18discount_amount = original_price * discount_rate / 100discounted_price = original_price - discount_amounttax_amount = discounted_price * tax_rate / 100final_price = discounted_price + tax_amountprint("Original Price =", original_price)print("Discount Amount =", discount_amount)print("Discounted Price =", discounted_price)print("Tax Amount =", tax_amount)print("Final Price =", final_price)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     float original_price = 5000;
     float discount_rate = 10;
     float tax_rate = 18;
-
     float discount_amount =
         original_price * discount_rate / 100;
-
     float discounted_price =
         original_price - discount_amount;
-
     float tax_amount =
         discounted_price * tax_rate / 100;
-
     float final_price =
         discounted_price + tax_amount;
-
     printf("Original Price = %.2f\n", original_price);
     printf("Discount Amount = %.2f\n", discount_amount);
     printf("Discounted Price = %.2f\n", discounted_price);
     printf("Tax Amount = %.2f\n", tax_amount);
     printf("Final Price = %.2f\n", final_price);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
@@ -1226,19 +748,14 @@ public class Main {
         double originalPrice = 5000;
         double discountRate = 10;
         double taxRate = 18;
-
         double discountAmount =
             originalPrice * discountRate / 100;
-
         double discountedPrice =
             originalPrice - discountAmount;
-
         double taxAmount =
             discountedPrice * taxRate / 100;
-
         double finalPrice =
             discountedPrice + taxAmount;
-
         System.out.printf("Original Price = %.2f%n", originalPrice);
         System.out.printf("Discount Amount = %.2f%n", discountAmount);
         System.out.printf("Discounted Price = %.2f%n", discountedPrice);
@@ -1247,25 +764,7 @@ public class Main {
     }
 }
 
-
-Q21. Demonstrate All Arithmetic Operators
-Question:
-Write a program to perform all basic arithmetic operations on two integers. Display addition, subtraction, multiplication, division, modulus, floor division, and exponentiation wherever supported.
-
-Sample Input:
-First Number = 20
-Second Number = 6
-
-
-Expected Output:
-Addition = 26
-Subtraction = 14
-Multiplication = 120
-Division = 3.333333
-Floor Division = 3
-Modulus = 2
-Exponentiation = 64000000
-
+Q21. Write a program to perform all basic arithmetic operations on two integers. Display addition, subtraction, multiplication, division, modulus, floor division, and exponentiation wherever supported.
 
 Logic:
 - Addition: a + b
@@ -1275,19 +774,16 @@ Logic:
 - Floor Division: a // b
 - Modulus: a % b
 - Exponentiation: a ** b
+
 Python Code:
 a = 20b = 6print("Addition =", a + b)print("Subtraction =", a - b)print("Multiplication =", a * b)print("Division =", a / b)print("Floor Division =", a // b)print("Modulus =", a % b)print("Exponentiation =", a ** b)
-
-
 
 C Code:
 #include <stdio.h>
 #include <math.h>
-
 int main() {
     int a = 20;
     int b = 6;
-
     printf("Addition = %d\n", a + b);
     printf("Subtraction = %d\n", a - b);
     printf("Multiplication = %d\n", a * b);
@@ -1295,17 +791,14 @@ int main() {
     printf("Floor Division = %d\n", a / b);
     printf("Modulus = %d\n", a % b);
     printf("Exponentiation = %.0f\n", pow(a, b));
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int a = 20;
         int b = 6;
-
         System.out.println("Addition = " + (a + b));
         System.out.println("Subtraction = " + (a - b));
         System.out.println("Multiplication = " + (a * b));
@@ -1317,23 +810,7 @@ public class Main {
 }
 
 
-
-Q22. Demonstrate Compound Assignment Operators
-Question:
-Write a program to demonstrate compound assignment operators (+=, -=, *=, /=, and %=) using a variable. Display the value after each operation.
-
-Sample Input:
-Initial Value = 20
-
-
-Expected Output:
-Initial Value = 20
-After += 5: 25
-After -= 3: 22
-After *= 2: 44
-After /= 4: 11
-After %= 6: 5
-
+Q22. Write a program to demonstrate compound assignment operators (+=, -=, *=, /=, and %=) using a variable. Display the value after each operation.
 
 Logic:
 - a += 5 means a = a + 5
@@ -1341,384 +818,233 @@ Logic:
 - a *= 2 means a = a * 2
 - a /= 4 means a = a / 4
 - a %= 6 means a = a % 6
+
 Python Code:
 a = 20print("Initial Value =", a)a += 5print("After += 5:", a)a -= 3print("After -= 3:", a)a *= 2print("After *= 2:", a)a //= 4print("After /= 4:", a)a %= 6print("After %= 6:", a)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int a = 20;
-
     printf("Initial Value = %d\n", a);
-
     a += 5;
     printf("After += 5: %d\n", a);
-
     a -= 3;
     printf("After -= 3: %d\n", a);
-
     a *= 2;
     printf("After *= 2: %d\n", a);
-
     a /= 4;
     printf("After /= 4: %d\n", a);
-
     a %= 6;
     printf("After %%= 6: %d\n", a);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int a = 20;
-
         System.out.println("Initial Value = " + a);
-
         a += 5;
         System.out.println("After += 5: " + a);
-
         a -= 3;
         System.out.println("After -= 3: " + a);
-
         a *= 2;
         System.out.println("After *= 2: " + a);
-
         a /= 4;
         System.out.println("After /= 4: " + a);
-
         a %= 6;
         System.out.println("After %= 6: " + a);
     }
 }
 
-
-
-Q23. Calculate the Result of Increment and Decrement Operations
-Question:
-Write a program to demonstrate increment and decrement operations. Display the value before and after incrementing and decrementing a variable.
-
-Sample Input:
-Initial Value = 10
-
-
-Expected Output:
-Initial Value = 10
-After Increment = 11
-After Decrement = 10
-
+Q23. Write a program to demonstrate increment and decrement operations. Display the value before and after incrementing and decrementing a variable.
 
 Logic:
 - Increment increases a variable's value by 1.
 - Decrement decreases a variable's value by 1.
 - In C and Java, ++ and -- operators are available.
 - Python uses += 1 and -= 1 instead.
+
 Python Code:
 number = 10print("Initial Value =", number)number += 1print("After Increment =", number)number -= 1print("After Decrement =", number)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int number = 10;
-
     printf("Initial Value = %d\n", number);
-
     ++number;
     printf("After Increment = %d\n", number);
-
     --number;
     printf("After Decrement = %d\n", number);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int number = 10;
-
         System.out.println("Initial Value = " + number);
-
         ++number;
         System.out.println("After Increment = " + number);
-
         --number;
         System.out.println("After Decrement = " + number);
     }
 }
 
+=================================================================
 
-
-Q24. Demonstrate Pre-Increment and Post-Increment Operators
-Question:
-Write a program to demonstrate the difference between pre-increment and post-increment operators. Display the value returned by each operation and the final variable value.
-
-Sample Input:
-Initial Value = 5
-
-
-Expected Output:
-Initial Value = 5
-
-Post-Increment Result = 5
-Value After Post-Increment = 6
-
-Pre-Increment Result = 7
-Value After Pre-Increment = 7
-
+Q24. Write a program to demonstrate the difference between pre-increment and post-increment operators. Display the value returned by each operation and the final variable value.
 
 Logic:
 - Post-increment (a++): Uses the current value first, then increments it.
 - Pre-increment (++a): Increments the value first, then uses it.
-Python Code:
 
+Python Code:
 Python does not support ++ or -- operators. We demonstrate the same behavior using assignment operations.
 number = 5print("Initial Value =", number)post_result = numbernumber += 1print("\nPost-Increment Result =", post_result)print("Value After Post-Increment =", number)number += 1pre_result = numberprint("\nPre-Increment Result =", pre_result)print("Value After Pre-Increment =", number)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int number = 5;
-
     printf("Initial Value = %d\n", number);
-
     int post_result = number++;
-
     printf("\nPost-Increment Result = %d\n", post_result);
     printf("Value After Post-Increment = %d\n", number);
-
     int pre_result = ++number;
-
     printf("\nPre-Increment Result = %d\n", pre_result);
     printf("Value After Pre-Increment = %d\n", number);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int number = 5;
-
         System.out.println("Initial Value = " + number);
-
         int postResult = number++;
-
         System.out.println("\nPost-Increment Result = " + postResult);
         System.out.println("Value After Post-Increment = " + number);
-
         int preResult = ++number;
-
         System.out.println("\nPre-Increment Result = " + preResult);
         System.out.println("Value After Pre-Increment = " + number);
     }
 }
 
+==========================================================
 
-
-Q25. Calculate the Final Balance Using Compound Assignment Operators
-Question:
-Write a program to calculate the final balance of a bank account using compound assignment operators.
-
-A customer initially deposits ₹10,000. Then the customer deposits ₹5,000, withdraws ₹2,000, receives an additional ₹500, and finally pays a service charge of ₹300. Calculate the final account balance.
-
-Sample Input:
-Initial Balance = 10000
-Additional Deposit = 5000
-Withdrawal = 2000
-Bonus Amount = 500
-Service Charge = 300
-
-
-Expected Output:
-Initial Balance = 10000
-After Deposit = 15000
-After Withdrawal = 13000
-After Bonus = 13500
-After Service Charge = 13200
-
-Final Balance = 13200
-
+Q25. Write a program to calculate the final balance of a bank account using compound assignment operators.
 
 Logic:
 - Deposit: balance += amount
 - Withdrawal: balance -= amount
 - Bonus: balance += amount
 - Service Charge: balance -= amount
+
 Python Code:
 balance = 10000deposit = 5000withdrawal = 2000bonus = 500service_charge = 300print("Initial Balance =", balance)balance += depositprint("After Deposit =", balance)balance -= withdrawalprint("After Withdrawal =", balance)balance += bonusprint("After Bonus =", balance)balance -= service_chargeprint("After Service Charge =", balance)print("\nFinal Balance =", balance)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int balance = 10000;
-
     int deposit = 5000;
     int withdrawal = 2000;
     int bonus = 500;
     int service_charge = 300;
-
     printf("Initial Balance = %d\n", balance);
-
     balance += deposit;
     printf("After Deposit = %d\n", balance);
-
     balance -= withdrawal;
     printf("After Withdrawal = %d\n", balance);
-
     balance += bonus;
     printf("After Bonus = %d\n", balance);
-
     balance -= service_charge;
     printf("After Service Charge = %d\n", balance);
-
     printf("\nFinal Balance = %d\n", balance);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int balance = 10000;
-
         int deposit = 5000;
         int withdrawal = 2000;
         int bonus = 500;
         int serviceCharge = 300;
-
         System.out.println("Initial Balance = " + balance);
-
         balance += deposit;
         System.out.println("After Deposit = " + balance);
-
         balance -= withdrawal;
         System.out.println("After Withdrawal = " + balance);
-
         balance += bonus;
         System.out.println("After Bonus = " + balance);
-
         balance -= serviceCharge;
         System.out.println("After Service Charge = " + balance);
-
         System.out.println("\nFinal Balance = " + balance);
     }
 }
 
+===========================================================
 
-Q26. Demonstrate Multiple Assignment Operations
-Question:
-Write a program to demonstrate multiple assignment operations. Assign values to multiple variables in a single statement, exchange their values, and display the results.
-
-Sample Input:
-A = 10
-B = 20
-C = 30
-
-
-Expected Output:
-Original Values:
-A = 10
-B = 20
-C = 30
-
-After Assignment:
-A = 100
-B = 200
-C = 300
-
-After Swapping:
-A = 300
-B = 100
-C = 200
-
+Q26. Write a program to demonstrate multiple assignment operations. Assign values to multiple variables in a single statement, exchange their values, and display the results.
 
 Logic:
 - Assign values to multiple variables.
 - Use multiple assignment to update the variables.
 - Exchange values in a circular order.
+
 Python Code:
 a, b, c = 10, 20, 30print("Original Values:")print("A =", a)print("B =", b)print("C =", c)a, b, c = 100, 200, 300print("\nAfter Assignment:")print("A =", a)print("B =", b)print("C =", c)a, b, c = c, a, bprint("\nAfter Swapping:")print("A =", a)print("B =", b)print("C =", c)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int a = 10, b = 20, c = 30;
-
     printf("Original Values:\n");
     printf("A = %d\n", a);
     printf("B = %d\n", b);
     printf("C = %d\n", c);
-
     a = 100;
     b = 200;
     c = 300;
-
     printf("\nAfter Assignment:\n");
     printf("A = %d\n", a);
     printf("B = %d\n", b);
     printf("C = %d\n", c);
-
     int temp = a;
-
     a = c;
     c = b;
     b = temp;
-
     printf("\nAfter Swapping:\n");
     printf("A = %d\n", a);
     printf("B = %d\n", b);
     printf("C = %d\n", c);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int a = 10, b = 20, c = 30;
-
         System.out.println("Original Values:");
         System.out.println("A = " + a);
         System.out.println("B = " + b);
         System.out.println("C = " + c);
-
         a = 100;
         b = 200;
         c = 300;
-
         System.out.println("\nAfter Assignment:");
         System.out.println("A = " + a);
         System.out.println("B = " + b);
         System.out.println("C = " + c);
-
         int temp = a;
-
         a = c;
         c = b;
         b = temp;
-
         System.out.println("\nAfter Swapping:");
         System.out.println("A = " + a);
         System.out.println("B = " + b);
@@ -1726,25 +1052,9 @@ public class Main {
     }
 }
 
+==========================================================
 
-
-Q27. Demonstrate Operator Precedence
-Question:
-Write a program to evaluate different arithmetic expressions and demonstrate how operator precedence determines the order of operations.
-
-Sample Input:
-A = 10
-B = 5
-C = 2
-
-
-Expected Output:
-Expression 1 = 20
-Expression 2 = 20
-Expression 3 = 30
-Expression 4 = 60
-Expression 5 = 15
-
+Q27. Write a program to evaluate different arithmetic expressions and demonstrate how operator precedence determines the order of operations.
 
 Formula / Logic:
 
@@ -1759,31 +1069,24 @@ Multiplication and division have higher precedence than addition and subtraction
 Python Code:
 a = 10b = 5c = 2result1 = a + b * cresult2 = (a + b) * cresult3 = a * b - c * 10result4 = a + b * c * 5result5 = a + b - cprint("Expression 1 =", result1)print("Expression 2 =", result2)print("Expression 3 =", result3)print("Expression 4 =", result4)print("Expression 5 =", result5)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int a = 10;
     int b = 5;
     int c = 2;
-
     int result1 = a + b * c;
     int result2 = (a + b) * c;
     int result3 = a * b - c * 10;
     int result4 = a + b * c * 5;
     int result5 = a + b - c;
-
     printf("Expression 1 = %d\n", result1);
     printf("Expression 2 = %d\n", result2);
     printf("Expression 3 = %d\n", result3);
     printf("Expression 4 = %d\n", result4);
     printf("Expression 5 = %d\n", result5);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
@@ -1791,13 +1094,11 @@ public class Main {
         int a = 10;
         int b = 5;
         int c = 2;
-
         int result1 = a + b * c;
         int result2 = (a + b) * c;
         int result3 = a * b - c * 10;
         int result4 = a + b * c * 5;
         int result5 = a + b - c;
-
         System.out.println("Expression 1 = " + result1);
         System.out.println("Expression 2 = " + result2);
         System.out.println("Expression 3 = " + result3);
@@ -1806,89 +1107,48 @@ public class Main {
     }
 }
 
+=============================================================
 
-
-Q28. Calculate the Result Using Floor Division and Modulus
-Question:
-Write a program to divide two numbers and calculate the floor division and remainder. Use both positive and negative values to demonstrate the difference in division behavior.
-
-Sample Input:
-A = -17
-B = 5
-
-
-Expected Output:
-Floor Division = -4
-Remainder = 3
-
+Q28. Write a program to divide two numbers and calculate the floor division and remainder. Use both positive and negative values to demonstrate the difference in division behavior.
 
 Formula / Logic:
 - Floor division rounds the quotient down toward negative infinity.
 - Modulus gives the remainder according to the language's division rules.
 - Python's floor division and modulus differ from C and Java for negative operands.
+
 Python Code:
 a = -17b = 5floor_result = a // bremainder = a % bprint("Floor Division =", floor_result)print("Remainder =", remainder)
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int a = -17;
     int b = 5;
-
     int quotient = a / b;
     int remainder = a % b;
-
     printf("Integer Division = %d\n", quotient);
     printf("Remainder = %d\n", remainder);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int a = -17;
         int b = 5;
-
         int quotient = a / b;
         int remainder = a % b;
-
         System.out.println("Integer Division = " + quotient);
         System.out.println("Remainder = " + remainder);
     }
 }
 
+======================================================
 
-Important Note:
-Python produces -4 and 3, while C and Java produce -3 and -2 for integer division and remainder respectively. This is because Python uses floor division, whereas C and Java truncate integer division toward zero.
-
-Q29. Calculate a Mathematical Expression Using Arithmetic Operators
-Question:
-Write a program to calculate the value of a mathematical expression using multiple arithmetic operators.
+Q29. Write a program to calculate the value of a mathematical expression using multiple arithmetic operators.
 
 The expression is:
-\[
 Result = \frac{(A+B)\times(C-D)+E^2}{F}
-\]
-
-Use the given values and display the final result.
-
-Sample Input:
-A = 10
-B = 5
-C = 8
-D = 3
-E = 4
-F = 5
-
-
-Expected Output:
-Result = 31.20
-
 
 Formula / Logic:
 1. Calculate A + B.
@@ -1897,14 +1157,12 @@ Formula / Logic:
 4. Calculate the square of E.
 5. Add both results.
 6. Divide by F.
+
 Python Code:
 a = 10b = 5c = 8d = 3e = 4f = 5result = ((a + b) * (c - d) + e ** 2) / fprint("Result =", round(result, 2))
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     float a = 10;
     float b = 5;
@@ -1912,14 +1170,10 @@ int main() {
     float d = 3;
     float e = 4;
     float f = 5;
-
     float result = ((a + b) * (c - d) + e * e) / f;
-
     printf("Result = %.2f\n", result);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
@@ -1930,47 +1184,14 @@ public class Main {
         double d = 3;
         double e = 4;
         double f = 5;
-
         double result = ((a + b) * (c - d) + Math.pow(e, 2)) / f;
-
         System.out.printf("Result = %.2f%n", result);
     }
 }
 
+===========================================================
 
-
-Q30. Calculate the Total Cost of Multiple Products
-Question:
-Write a program to calculate the total purchase cost of three products. Each product has a different quantity and unit price. Calculate the subtotal, apply a 5% discount, and then add 18% tax to the discounted amount.
-
-Sample Input:
-Product 1:
-Quantity = 2
-Unit Price = 500
-
-Product 2:
-Quantity = 3
-Unit Price = 200
-
-Product 3:
-Quantity = 1
-Unit Price = 1000
-
-Discount Rate = 5%
-Tax Rate = 18%
-
-
-Expected Output:
-Product 1 Cost = 1000.00
-Product 2 Cost = 600.00
-Product 3 Cost = 1000.00
-
-Subtotal = 2600.00
-Discount Amount = 130.00
-Discounted Amount = 2470.00
-Tax Amount = 444.60
-Final Total = 2914.60
-
+Q30. Write a program to calculate the total purchase cost of three products. Each product has a different quantity and unit price. Calculate the subtotal, apply a 5% discount, and then add 18% tax to the discounted amount.
 
 Formula / Logic:
 - Product Cost = Quantity × Unit Price
@@ -1979,86 +1200,62 @@ Formula / Logic:
 - Discounted Amount = Subtotal − Discount
 - Tax = Discounted Amount × 18 / 100
 - Final Total = Discounted Amount + Tax
+
 Python Code:
 quantity1 = 2price1 = 500quantity2 = 3price2 = 200quantity3 = 1price3 = 1000discount_rate = 5tax_rate = 18cost1 = quantity1 * price1cost2 = quantity2 * price2cost3 = quantity3 * price3subtotal = cost1 + cost2 + cost3discount_amount = subtotal * discount_rate / 100discounted_amount = subtotal - discount_amounttax_amount = discounted_amount * tax_rate / 100final_total = discounted_amount + tax_amountprint("Product 1 Cost =", f"{cost1:.2f}")print("Product 2 Cost =", f"{cost2:.2f}")print("Product 3 Cost =", f"{cost3:.2f}")print("\nSubtotal =", f"{subtotal:.2f}")print("Discount Amount =", f"{discount_amount:.2f}")print("Discounted Amount =", f"{discounted_amount:.2f}")print("Tax Amount =", f"{tax_amount:.2f}")print("Final Total =", f"{final_total:.2f}")
 
-
-
 C Code:
 #include <stdio.h>
-
 int main() {
     int quantity1 = 2;
     float price1 = 500;
-
     int quantity2 = 3;
     float price2 = 200;
-
     int quantity3 = 1;
     float price3 = 1000;
-
     float discount_rate = 5;
     float tax_rate = 18;
-
     float cost1 = quantity1 * price1;
     float cost2 = quantity2 * price2;
     float cost3 = quantity3 * price3;
-
     float subtotal = cost1 + cost2 + cost3;
-
     float discount_amount = subtotal * discount_rate / 100;
     float discounted_amount = subtotal - discount_amount;
-
     float tax_amount = discounted_amount * tax_rate / 100;
-
     float final_total = discounted_amount + tax_amount;
-
     printf("Product 1 Cost = %.2f\n", cost1);
     printf("Product 2 Cost = %.2f\n", cost2);
     printf("Product 3 Cost = %.2f\n", cost3);
-
     printf("\nSubtotal = %.2f\n", subtotal);
     printf("Discount Amount = %.2f\n", discount_amount);
     printf("Discounted Amount = %.2f\n", discounted_amount);
     printf("Tax Amount = %.2f\n", tax_amount);
     printf("Final Total = %.2f\n", final_total);
-
     return 0;
 }
-
 
 Java Code:
 public class Main {
     public static void main(String[] args) {
         int quantity1 = 2;
         double price1 = 500;
-
         int quantity2 = 3;
         double price2 = 200;
-
         int quantity3 = 1;
         double price3 = 1000;
-
         double discountRate = 5;
         double taxRate = 18;
-
         double cost1 = quantity1 * price1;
         double cost2 = quantity2 * price2;
         double cost3 = quantity3 * price3;
-
         double subtotal = cost1 + cost2 + cost3;
-
         double discountAmount = subtotal * discountRate / 100;
         double discountedAmount = subtotal - discountAmount;
-
         double taxAmount = discountedAmount * taxRate / 100;
-
         double finalTotal = discountedAmount + taxAmount;
-
         System.out.printf("Product 1 Cost = %.2f%n", cost1);
         System.out.printf("Product 2 Cost = %.2f%n", cost2);
         System.out.printf("Product 3 Cost = %.2f%n", cost3);
-
         System.out.printf("%nSubtotal = %.2f%n", subtotal);
         System.out.printf("Discount Amount = %.2f%n", discountAmount);
         System.out.printf("Discounted Amount = %.2f%n", discountedAmount);
@@ -2067,173 +1264,99 @@ public class Main {
     }
 }
 
-Q31. Unary Minus and Unary Plus Operators
-Difficulty: Easy
+=================================================================
 
-Question (English):
-
-Write a program to input an integer and display its positive and negative values using unary plus (+) and unary minus (-) operators.
-
-Sample Input:
-Enter a number: 25
-
-
-Expected Output:
-Original Number: 25
-Positive Value: 25
-Negative Value: -25
-
+Q31. Write a program to input an integer and display its positive and negative values using unary plus (+) and unary minus (-) operators.
 
 Formula / Logic:
 - Unary plus (+): Keeps the number positive.
 - Unary minus (-): Changes the sign of the number.
+
 1. Python Code
 num = int(input("Enter a number: "))positive = +numnegative = -numprint("Original Number:", num)print("Positive Value:", positive)print("Negative Value:", negative)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num, positive, negative;
-
     printf("Enter a number: ");
     scanf("%d", &num);
-
     positive = +num;
     negative = -num;
-
     printf("Original Number: %d\n", num);
     printf("Positive Value: %d\n", positive);
     printf("Negative Value: %d\n", negative);
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-
         int positive = +num;
         int negative = -num;
-
         System.out.println("Original Number: " + num);
         System.out.println("Positive Value: " + positive);
         System.out.println("Negative Value: " + negative);
-
         sc.close();
     }
 }
 
+===========================================================
 
-
-Q32. Absolute Value Using Unary Logic
-Difficulty: Easy
-
-Question (English):
-
-Write a program to input an integer and calculate its absolute value without using any built-in absolute value function.
-
-Sample Input:
-Enter a number: -45
-
-
-Expected Output:
-Original Number: -45
-Absolute Value: 45
-
+Q32. Write a program to input an integer and calculate its absolute value without using any built-in absolute value function.
 
 Formula / Logic:
-\[
 AbsoluteValue =
 \begin{cases}
 -num & \text{if num < 0}\\
 num & \text{otherwise}
 \end{cases}
-\]
 
-Hinglish: Agar number negative hai toh unary minus se uska sign change kar denge. Otherwise number same rahega.
 1. Python Code
 num = int(input("Enter a number: "))if num < 0:    absolute = -numelse:    absolute = numprint("Original Number:", num)print("Absolute Value:", absolute)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num, absolute;
-
     printf("Enter a number: ");
     scanf("%d", &num);
-
     if (num < 0) {
         absolute = -num;
     } else {
         absolute = num;
     }
-
     printf("Original Number: %d\n", num);
     printf("Absolute Value: %d\n", absolute);
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-
         int absolute;
-
         if (num < 0) {
             absolute = -num;
         } else {
             absolute = num;
         }
-
         System.out.println("Original Number: " + num);
         System.out.println("Absolute Value: " + absolute);
-
         sc.close();
     }
 }
 
+=====================================================
 
-
-Q33. Compound Assignment Operators
-Difficulty: Easy
-
-Question (English):
-
-Write a program to input an initial balance and perform addition, subtraction, multiplication, division and modulus operations using compound assignment operators.
-
-Sample Input:
-Enter initial balance: 100
-Enter value: 10
-
-
-Expected Output:
-After Addition: 110
-After Subtraction: 100
-After Multiplication: 1000
-After Division: 100
-After Modulus: 0
-
+Q33.Write a program to input an initial balance and perform addition, subtraction, multiplication, division and modulus operations using compound assignment operators.
 
 Formula / Logic:
 - += Addition assignment
@@ -2242,103 +1365,68 @@ Formula / Logic:
 - /= Division assignment
 - %= Modulus assignment
 Har operation ke liye original balance ko reset karenge, taaki sabhi results same initial value se calculate hon.
+
 1. Python Code
 balance = int(input("Enter initial balance: "))value = int(input("Enter value: "))result = balanceresult += valueprint("After Addition:", result)result = balanceresult -= valueprint("After Subtraction:", result)result = balanceresult *= valueprint("After Multiplication:", result)result = balanceresult //= valueprint("After Division:", result)result = balanceresult %= valueprint("After Modulus:", result)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int balance, value, result;
-
     printf("Enter initial balance: ");
     scanf("%d", &balance);
-
     printf("Enter value: ");
     scanf("%d", &value);
-
     result = balance;
     result += value;
     printf("After Addition: %d\n", result);
-
     result = balance;
     result -= value;
     printf("After Subtraction: %d\n", result);
-
     result = balance;
     result *= value;
     printf("After Multiplication: %d\n", result);
-
     result = balance;
     result /= value;
     printf("After Division: %d\n", result);
-
     result = balance;
     result %= value;
     printf("After Modulus: %d\n", result);
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter initial balance: ");
         int balance = sc.nextInt();
-
         System.out.print("Enter value: ");
         int value = sc.nextInt();
-
         int result;
-
         result = balance;
         result += value;
         System.out.println("After Addition: " + result);
-
         result = balance;
         result -= value;
         System.out.println("After Subtraction: " + result);
-
         result = balance;
         result *= value;
         System.out.println("After Multiplication: " + result);
-
         result = balance;
         result /= value;
         System.out.println("After Division: " + result);
-
         result = balance;
         result %= value;
         System.out.println("After Modulus: " + result);
-
         sc.close();
     }
 }
 
+===========================================================
 
-
-Q34. Assignment Expression (Walrus Operator)
-Difficulty: Medium
-
-Question (English):
-
-Write a Python program to input a number, assign its value to a variable inside an expression, and display whether the number is greater than 100.
-
-Sample Input:
-Enter a number: 150
-
-
-Expected Output:
-Entered Number: 150
-Is Number Greater Than 100? True
-
+Q34. Write a Python program to input a number, assign its value to a variable inside an expression, and display whether the number is greater than 100.
 
 Formula / Logic:
 
@@ -2350,345 +1438,209 @@ Important language difference:
 - Python supports :=.
 - C and Java do not have Python's Walrus operator.
 - We will use normal assignment followed by comparison in C and Java to produce equivalent results.
+
 1. Python Code
 if (num := int(input("Enter a number: "))) >= 0:    result = num > 100else:    result = num > 100print("Entered Number:", num)print("Is Number Greater Than 100?", result)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num;
     int result;
-
     printf("Enter a number: ");
     scanf("%d", &num);
-
     result = (num > 100);
-
     printf("Entered Number: %d\n", num);
     printf("Is Number Greater Than 100? %s\n",
            result ? "True" : "False");
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-
         boolean result = num > 100;
-
         System.out.println("Entered Number: " + num);
         System.out.println("Is Number Greater Than 100? " + result);
-
         sc.close();
     }
 }
 
+===========================================================
 
-
-Q35. Mixed Arithmetic Using Assignment Operators
-Difficulty: Medium
-
-Question (English):
-
-Write a program to input three numbers representing the price of a product, discount percentage and tax percentage. Calculate the discounted price, tax amount and final payable amount using compound assignment operators.
-
-Sample Input:
-Enter product price: 2000
-Enter discount percentage: 10
-Enter tax percentage: 5
-
-
-Expected Output:
-Original Price: 2000.00
-Discount Amount: 200.00
-Price After Discount: 1800.00
-Tax Amount: 90.00
-Final Payable Amount: 1890.00
-
+Q35. Write a program to input three numbers representing the price of a product, discount percentage and tax percentage. Calculate the discounted price, tax amount and final payable amount using compound assignment operators.
 
 Formula / Logic:
 
 1. Discount Amount:
-\[
 Discount = \frac{Price \times DiscountRate}{100}
-\]
 
 2. Discounted Price:
-\[
 DiscountedPrice = Price - Discount
-\]
 
 3. Tax Amount:
-\[
 Tax = \frac{DiscountedPrice \times TaxRate}{100}
-\]
 
 4. Final Amount:
-\[
 FinalAmount = DiscountedPrice + Tax
-\]
 
 1. Python Code
 price = float(input("Enter product price: "))discount_rate = float(input("Enter discount percentage: "))tax_rate = float(input("Enter tax percentage: "))discount = price * discount_rate / 100discounted_price = pricediscounted_price -= discounttax = discounted_price * tax_rate / 100final_amount = discounted_pricefinal_amount += taxprint(f"Original Price: {price:.2f}")print(f"Discount Amount: {discount:.2f}")print(f"Price After Discount: {discounted_price:.2f}")print(f"Tax Amount: {tax:.2f}")print(f"Final Payable Amount: {final_amount:.2f}")
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     float price, discount_rate, tax_rate;
     float discount, discounted_price;
     float tax, final_amount;
-
     printf("Enter product price: ");
     scanf("%f", &price);
-
     printf("Enter discount percentage: ");
     scanf("%f", &discount_rate);
-
     printf("Enter tax percentage: ");
     scanf("%f", &tax_rate);
-
     discount = price * discount_rate / 100;
-
     discounted_price = price;
     discounted_price -= discount;
-
     tax = discounted_price * tax_rate / 100;
-
     final_amount = discounted_price;
     final_amount += tax;
-
     printf("Original Price: %.2f\n", price);
     printf("Discount Amount: %.2f\n", discount);
     printf("Price After Discount: %.2f\n", discounted_price);
     printf("Tax Amount: %.2f\n", tax);
     printf("Final Payable Amount: %.2f\n", final_amount);
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter product price: ");
         double price = sc.nextDouble();
-
         System.out.print("Enter discount percentage: ");
         double discountRate = sc.nextDouble();
-
         System.out.print("Enter tax percentage: ");
         double taxRate = sc.nextDouble();
-
         double discount = price * discountRate / 100;
-
         double discountedPrice = price;
         discountedPrice -= discount;
-
         double tax = discountedPrice * taxRate / 100;
-
         double finalAmount = discountedPrice;
         finalAmount += tax;
-
         System.out.printf("Original Price: %.2f%n", price);
         System.out.printf("Discount Amount: %.2f%n", discount);
         System.out.printf("Price After Discount: %.2f%n", discountedPrice);
         System.out.printf("Tax Amount: %.2f%n", tax);
         System.out.printf("Final Payable Amount: %.2f%n", finalAmount);
-
         sc.close();
     }
 }
 
-Q36. Equal To and Not Equal To Operators
-Difficulty: Easy
+======================================================
 
-Question (English):
-
-Write a program to input two integers and check whether they are equal or not equal using comparison operators.
-
-Sample Input:
-Enter first number: 25
-Enter second number: 30
-
-
-Expected Output:
-Are numbers equal? False
-Are numbers not equal? True
-
+Q36. Write a program to input two integers and check whether they are equal or not equal using comparison operators.
 
 Formula / Logic:
 - == checks whether two values are equal.
 - != checks whether two values are different.
 1. Python Code
+
 num1 = int(input("Enter first number: "))num2 = int(input("Enter second number: "))equal = num1 == num2not_equal = num1 != num2print("Are numbers equal?", equal)print("Are numbers not equal?", not_equal)
-
-
 
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num1, num2;
-
     printf("Enter first number: ");
     scanf("%d", &num1);
-
     printf("Enter second number: ");
     scanf("%d", &num2);
-
     int equal = (num1 == num2);
     int not_equal = (num1 != num2);
-
     printf("Are numbers equal? %s\n", equal ? "True" : "False");
     printf("Are numbers not equal? %s\n", not_equal ? "True" : "False");
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter first number: ");
         int num1 = sc.nextInt();
-
         System.out.print("Enter second number: ");
         int num2 = sc.nextInt();
-
         boolean equal = num1 == num2;
         boolean notEqual = num1 != num2;
-
         System.out.println("Are numbers equal? " + equal);
         System.out.println("Are numbers not equal? " + notEqual);
-
         sc.close();
     }
 }
 
+============================================================
 
-
-Q37. Greater Than and Less Than Operators
-Difficulty: Easy
-
-Question (English):
-
-Write a program to input two numbers and determine which number is greater, smaller or whether both numbers are equal using comparison operators.
-
-Sample Input:
-Enter first number: 45
-Enter second number: 30
-
-
-Expected Output:
-First number is greater: True
-First number is smaller: False
-Both numbers are equal: False
-
+Q37. Write a program to input two numbers and determine which number is greater, smaller or whether both numbers are equal using comparison operators.
 
 Formula / Logic:
 - > Greater than
 - < Less than
 - >= Greater than or equal to
 - <= Less than or equal to
+
 1. Python Code
 num1 = int(input("Enter first number: "))num2 = int(input("Enter second number: "))print("First number is greater:", num1 > num2)print("First number is smaller:", num1 < num2)print("Both numbers are equal:", num1 == num2)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num1, num2;
-
     printf("Enter first number: ");
     scanf("%d", &num1);
-
     printf("Enter second number: ");
     scanf("%d", &num2);
-
     printf("First number is greater: %s\n",
            num1 > num2 ? "True" : "False");
-
     printf("First number is smaller: %s\n",
            num1 < num2 ? "True" : "False");
-
     printf("Both numbers are equal: %s\n",
            num1 == num2 ? "True" : "False");
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter first number: ");
         int num1 = sc.nextInt();
-
         System.out.print("Enter second number: ");
         int num2 = sc.nextInt();
-
         System.out.println("First number is greater: " + (num1 > num2));
         System.out.println("First number is smaller: " + (num1 < num2));
         System.out.println("Both numbers are equal: " + (num1 == num2));
-
         sc.close();
     }
 }
 
+===============================================================
 
-
-Q38. Logical AND, OR and NOT Operators
-Difficulty: Easy
-
-Question (English):
-
-Write a program to input a student's marks in two subjects and check the following conditions:
+Q38. Write a program to input a student's marks in two subjects and check the following conditions:
 1. Whether the student passed both subjects (marks must be at least 40 in each subject).
 2. Whether the student passed at least one subject.
 3. Whether the student failed in both subjects.
 Use logical AND, OR and NOT operators.
 
-Sample Input:
-Enter marks in Subject 1: 75
-Enter marks in Subject 2: 30
-
-
-Expected Output:
-Passed Both Subjects: False
-Passed At Least One Subject: True
-Failed Both Subjects: False
-
-
 Formula / Logic:
-
 Let:
 - A = Marks1 >= 40
 - B = Marks2 >= 40
@@ -2697,93 +1649,58 @@ Logical operations:
 - OR: A || B / A or B
 - NOT: !(A or B) / not (A or B)
 Hinglish: AND mein dono conditions true honi chahiye, OR mein kam se kam ek true aur NOT result ko reverse karta hai.
+
 1. Python Code
 marks1 = int(input("Enter marks in Subject 1: "))marks2 = int(input("Enter marks in Subject 2: "))passed1 = marks1 >= 40passed2 = marks2 >= 40passed_both = passed1 and passed2passed_one = passed1 or passed2failed_both = not (passed1 or passed2)print("Passed Both Subjects:", passed_both)print("Passed At Least One Subject:", passed_one)print("Failed Both Subjects:", failed_both)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int marks1, marks2;
-
     printf("Enter marks in Subject 1: ");
     scanf("%d", &marks1);
-
     printf("Enter marks in Subject 2: ");
     scanf("%d", &marks2);
-
     int passed1 = marks1 >= 40;
     int passed2 = marks2 >= 40;
-
     int passed_both = passed1 && passed2;
     int passed_one = passed1 || passed2;
     int failed_both = !(passed1 || passed2);
-
     printf("Passed Both Subjects: %s\n",
            passed_both ? "True" : "False");
-
     printf("Passed At Least One Subject: %s\n",
            passed_one ? "True" : "False");
-
     printf("Failed Both Subjects: %s\n",
            failed_both ? "True" : "False");
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter marks in Subject 1: ");
         int marks1 = sc.nextInt();
-
         System.out.print("Enter marks in Subject 2: ");
         int marks2 = sc.nextInt();
-
         boolean passed1 = marks1 >= 40;
         boolean passed2 = marks2 >= 40;
-
         boolean passedBoth = passed1 && passed2;
         boolean passedOne = passed1 || passed2;
         boolean failedBoth = !(passed1 || passed2);
-
         System.out.println("Passed Both Subjects: " + passedBoth);
         System.out.println("Passed At Least One Subject: " + passedOne);
         System.out.println("Failed Both Subjects: " + failedBoth);
-
         sc.close();
     }
 }
 
+===================================================================
 
-
-Q39. Bitwise AND, OR and XOR Operators
-Difficulty: Medium
-
-Question (English):
-
-Write a program to input two positive integers and perform bitwise AND, OR and XOR operations. Display the results of all three operations.
-
-Sample Input:
-Enter first number: 12
-Enter second number: 10
-
-
-Expected Output:
-Bitwise AND: 8
-Bitwise OR: 14
-Bitwise XOR: 6
-
+Q39. Write a program to input two positive integers and perform bitwise AND, OR and XOR operations. Display the results of all three operations.
 
 Formula / Logic:
-
 Binary representation:
 12 = 1100
 10 = 1010
@@ -2796,141 +1713,83 @@ XOR  0110 = 6
 - & AND: Both bits must be 1.
 - | OR: At least one bit must be 1.
 - ^ XOR: Bits must be different.
+
 1. Python Code
 num1 = int(input("Enter first number: "))num2 = int(input("Enter second number: "))and_result = num1 & num2or_result = num1 | num2xor_result = num1 ^ num2print("Bitwise AND:", and_result)print("Bitwise OR:", or_result)print("Bitwise XOR:", xor_result)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num1, num2;
-
     printf("Enter first number: ");
     scanf("%d", &num1);
-
     printf("Enter second number: ");
     scanf("%d", &num2);
-
     int and_result = num1 & num2;
     int or_result = num1 | num2;
     int xor_result = num1 ^ num2;
-
     printf("Bitwise AND: %d\n", and_result);
     printf("Bitwise OR: %d\n", or_result);
     printf("Bitwise XOR: %d\n", xor_result);
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter first number: ");
         int num1 = sc.nextInt();
-
         System.out.print("Enter second number: ");
         int num2 = sc.nextInt();
-
         int andResult = num1 & num2;
         int orResult = num1 | num2;
         int xorResult = num1 ^ num2;
-
         System.out.println("Bitwise AND: " + andResult);
         System.out.println("Bitwise OR: " + orResult);
         System.out.println("Bitwise XOR: " + xorResult);
-
         sc.close();
     }
 }
 
+=============================================================
 
-
-Q40. Left Shift and Right Shift Operators
-Difficulty: Medium
-
-Question (English):
-
-Write a program to input an integer and perform left shift and right shift operations by two positions. Display both results.
-
-Sample Input:
-Enter a number: 20
-
-
-Expected Output:
-Original Number: 20
-After Left Shift by 2: 80
-After Right Shift by 2: 5
-
+Q40. Write a program to input an integer and perform left shift and right shift operations by two positions. Display both results.
 
 Formula / Logic:
 - Left Shift (<<): Shifts bits towards the left.
 - Right Shift (>>): Shifts bits towards the right.
 For positive integers:
-\[
 LeftShift = Number \times 2^n
-\]
-
-\[
 RightShift = Number \div 2^n
-\]
-
-Here, \(n = 2\).
-
-Binary representation:
-20 = 00010100
-
-Left Shift:
-00010100 → 01010000 = 80
-
-Right Shift:
-00010100 → 00000101 = 5
-
 
 1. Python Code
 num = int(input("Enter a number: "))left_shift = num << 2right_shift = num >> 2print("Original Number:", num)print("After Left Shift by 2:", left_shift)print("After Right Shift by 2:", right_shift)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num;
-
     printf("Enter a number: ");
     scanf("%d", &num);
-
     int left_shift = num << 2;
     int right_shift = num >> 2;
-
     printf("Original Number: %d\n", num);
     printf("After Left Shift by 2: %d\n", left_shift);
     printf("After Right Shift by 2: %d\n", right_shift);
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-
         int leftShift = num << 2;
         int rightShift = num >> 2;
-
         System.out.println("Original Number: " + num);
         System.out.println("After Left Shift by 2: " + leftShift);
         System.out.println("After Right Shift by 2: " + rightShift);
@@ -2939,21 +1798,9 @@ public class Main {
     }
 }
 
-Q41. Bitwise NOT Operator
-Difficulty: Medium
+=============================================
 
-Question (English):
-
-Write a program to input an integer and perform the bitwise NOT operation. Display the original number and its bitwise NOT result.
-
-Sample Input:
-Enter a number: 12
-
-
-Expected Output:
-Original Number: 12
-Bitwise NOT Result: -13
-
+Q41. Write a program to input an integer and perform the bitwise NOT operation. Display the original number and its bitwise NOT result.
 
 Formula / Logic:
 
@@ -2965,166 +1812,95 @@ For signed integers using two's complement representation:
 \sim n = -(n+1)
 \]
 
-Example:
-12 = 00001100
-~12 = 11110011 = -13
-
-
 1. Python Code
 num = int(input("Enter a number: "))result = ~numprint("Original Number:", num)print("Bitwise NOT Result:", result)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num;
-
     printf("Enter a number: ");
     scanf("%d", &num);
-
     int result = ~num;
-
     printf("Original Number: %d\n", num);
     printf("Bitwise NOT Result: %d\n", result);
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-
         int result = ~num;
-
         System.out.println("Original Number: " + num);
         System.out.println("Bitwise NOT Result: " + result);
-
         sc.close();
     }
 }
 
+=========================================================
 
-
-Q42. Combined Comparison and Logical Operators
-Difficulty: Medium
-
-Question (English):
-
-Write a program to input a person's age and monthly income. Check whether the person is eligible for a premium membership based on the following conditions:
+Q42. Write a program to input a person's age and monthly income. Check whether the person is eligible for a premium membership based on the following conditions:
 1. Age must be at least 18 years.
 2. Monthly income must be at least ₹30,000.
 3. The person must satisfy both conditions.
 Also check whether the person satisfies at least one condition.
 
-Sample Input:
-Enter age: 25
-Enter monthly income: 20000
-
-
-Expected Output:
-Eligible for Premium Membership: False
-Meets At Least One Condition: True
-
-
 Formula / Logic:
-
 Let:
 - A = Age >= 18
 - B = Monthly Income >= 30000
-\[
 Eligibility = A \ AND \ B
-\]
-
-\[
 AtLeastOne = A \ OR \ B
-\]
 
-Hinglish: Membership ke liye dono conditions satisfy karni hongi, lekin second result mein sirf ek condition bhi sufficient hai.
 1. Python Code
 age = int(input("Enter age: "))income = float(input("Enter monthly income: "))age_condition = age >= 18income_condition = income >= 30000eligible = age_condition and income_conditionat_least_one = age_condition or income_conditionprint("Eligible for Premium Membership:", eligible)print("Meets At Least One Condition:", at_least_one)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int age;
     float income;
-
     printf("Enter age: ");
     scanf("%d", &age);
-
     printf("Enter monthly income: ");
     scanf("%f", &income);
-
     int age_condition = age >= 18;
     int income_condition = income >= 30000;
-
     int eligible = age_condition && income_condition;
     int at_least_one = age_condition || income_condition;
-
     printf("Eligible for Premium Membership: %s\n",
            eligible ? "True" : "False");
-
     printf("Meets At Least One Condition: %s\n",
            at_least_one ? "True" : "False");
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter age: ");
         int age = sc.nextInt();
-
         System.out.print("Enter monthly income: ");
         double income = sc.nextDouble();
-
         boolean ageCondition = age >= 18;
         boolean incomeCondition = income >= 30000;
-
         boolean eligible = ageCondition && incomeCondition;
         boolean atLeastOne = ageCondition || incomeCondition;
-
         System.out.println("Eligible for Premium Membership: " + eligible);
         System.out.println("Meets At Least One Condition: " + atLeastOne);
-
         sc.close();
     }
 }
 
+======================================================================
 
-
-Q43. Check Whether a Number Lies Within a Range
-Difficulty: Medium
-
-Question (English):
-
-Write a program to input an integer and check whether it lies within the inclusive range of 50 to 100. Use comparison and logical operators.
-
-Sample Input:
-Enter a number: 75
-
-
-Expected Output:
-Number is within the range 50 to 100: True
-
+Q43. Write a program to input an integer and check whether it lies within the inclusive range of 50 to 100. Use comparison and logical operators.
 
 Formula / Logic:
 
@@ -3136,135 +1912,59 @@ num \geq 50 \ AND \ num \leq 100
 Python allows chained comparisons:
 50 <= num <= 100
 
-
-
-C and Java use two separate comparisons joined with logical AND.
 1. Python Code
 num = int(input("Enter a number: "))within_range = 50 <= num <= 100print("Number is within the range 50 to 100:", within_range)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     int num;
-
     printf("Enter a number: ");
     scanf("%d", &num);
-
     int within_range = (num >= 50 && num <= 100);
-
     printf("Number is within the range 50 to 100: %s\n",
            within_range ? "True" : "False");
-
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-
         boolean withinRange = num >= 50 && num <= 100;
-
         System.out.println(
             "Number is within the range 50 to 100: " + withinRange
         );
-
         sc.close();
     }
 }
 
+=====================================================================
 
-
-Q44. Bitwise Operators for Setting and Clearing Bits
-Difficulty: Hard
-
-Question (English):
-
-Write a program to input an integer and a bit position. Perform the following operations:
+Q44. Write a program to input an integer and a bit position. Perform the following operations:
 1. Set the specified bit to 1.
 2. Clear the specified bit to 0.
 3. Toggle the specified bit.
 Display the original number and the results of all three operations.
 
-Assume bit positions start from 0 (rightmost bit).
-
-Sample Input:
-Enter a number: 10
-Enter bit position: 1
-
-
-Expected Output:
-Original Number: 10
-After Setting Bit: 10
-After Clearing Bit: 8
-After Toggling Bit: 8
-
-
-Formula / Logic:
-
-Original number:
-10 = 1010
-
-
-Bit position = 1
-
-Mask:
-1 << 1 = 0010
-
-
-1. Set Bit
-\[
-Set = num \ OR \ mask
-\]
-
-1010 | 0010 = 1010
-
-2. Clear Bit
-\[
-Clear = num \ AND \sim mask
-\]
-
-1010 & 1101 = 1000
-
-3. Toggle Bit
-\[
-Toggle = num \ XOR \ mask
-\]
-
-1010 ^ 0010 = 1000
-
-Hinglish: Set bit ko 1 banata hai, Clear bit ko 0 banata hai aur Toggle bit ki current value reverse karta hai.
 1. Python Code
 num = int(input("Enter a number: "))position = int(input("Enter bit position: "))mask = 1 << position# Set the selected bitset_result = num | mask# Clear the selected bitclear_result = num & ~mask# Toggle the selected bittoggle_result = num ^ maskprint("Original Number:", num)print("After Setting Bit:", set_result)print("After Clearing Bit:", clear_result)print("After Toggling Bit:", toggle_result)
 
-
-
 2. C Code
 #include <stdio.h>
-
 int main() {
     unsigned int num, position;
-
     printf("Enter a number: ");
     scanf("%u", &num);
-
     printf("Enter bit position: ");
     scanf("%u", &position);
-
     if (position >= sizeof(unsigned int) * 8) {
         printf("Invalid bit position.\n");
         return 1;
     }
-
     unsigned int mask = 1U << position;
 
     // Set the selected bit
@@ -3284,14 +1984,11 @@ int main() {
     return 0;
 }
 
-
 3. Java Code
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
 
@@ -3324,7 +2021,7 @@ public class Main {
     }
 }
 
-
+==========================================================================
 
 Q45. Complex Operator Precedence Expression
 Difficulty: Hard
